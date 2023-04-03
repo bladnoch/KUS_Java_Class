@@ -1,8 +1,9 @@
 package chapter7;
 
 public class Bicycle {
+    //Data member
     private String ownerName;
-    private void Bycycle(){
+    public void Bicycle(){
         ownerName="Unknown";
     }
     public String getOwnerName(){

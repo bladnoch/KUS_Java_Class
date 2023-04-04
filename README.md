@@ -3,4 +3,4 @@
 
     Java_Inclass
 
-    /Users/doungukkim/Desktop/workspace/Java_Inclass
+    /Users/[name]/Desktop/workspace/Java_Inclass

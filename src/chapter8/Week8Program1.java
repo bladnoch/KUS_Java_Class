@@ -2,7 +2,7 @@ package chapter8;
 /*
         Week8Program1.java
         Creat multiple constructors
-        4-5-2-23
+        4-5-2023
         Dounguk Kim
  */
 

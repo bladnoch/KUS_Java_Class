@@ -2,7 +2,7 @@ package chapter8;
 /*
         Bicycle.java
         having multiple constructors
-        4-5-2-23
+        4-5-2023
         Dounguk Kim
  */
 public class Bicycle {

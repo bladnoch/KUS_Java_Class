@@ -5,6 +5,7 @@ package Homework_2;
  * @since 2023-4-11
  * @author Dounguk kim
  */
+
 import java.util.HashSet;
 import java.util.Random;
 
@@ -25,7 +26,7 @@ public class Q1 {
 
         while(allName.size()<STDNUM){                     //random name
             StringBuilder sb=new StringBuilder();
-            int sLength=rd.nextInt(5,11);
+            int sLength=rd.nextInt(3,9);
             for (int i =0; i<sLength;i++){
                 char chr=(char)(rd.nextInt(26)+'a');
                 sb.append(chr);

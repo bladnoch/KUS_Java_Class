@@ -7,22 +7,22 @@ package Homework_2;
  */
 public class Student {
     public String studentName;
-    private String studentID;
+    private int studentID;
     private String studentSex;
     private double studentGPA;
 
     public Student(){
-        studentID="Unknown";
+        studentID=0;
         studentName="Unknown";
         studentSex="Unknown";
         studentGPA=0.0;
     }
 
-    public String getStudnetID(){
+    public int getStudentID(){
         return studentID;
     }
-    public void setStudnetID(String sName){
-        this.studentName=sName;
+    public void setStudnetID(int sID){
+        this.studentID=sID;
     }
     public String getStudentSex(){
         return studentSex;

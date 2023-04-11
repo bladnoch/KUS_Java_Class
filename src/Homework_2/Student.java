@@ -18,9 +18,18 @@ public class Student {
         studentGPA=0.0;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getStudentID(){
         return studentID;
     }
+
+    /**
+     *
+     * @param sID
+     */
     public void setStudnetID(int sID){
         this.studentID=sID;
     }

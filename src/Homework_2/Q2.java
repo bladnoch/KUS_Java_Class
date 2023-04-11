@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Q1.java
+ * Q2.java
  * get ave. and max., and have exception control of type
  * @since 2023-4-11
  * @author Dounguk kim

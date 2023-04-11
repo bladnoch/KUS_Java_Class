@@ -1,7 +1,7 @@
 package Homework_2;
 /**
  * Studnet.java
- * make classes by following requirments(not main class)
+ * using for Q1. To make classes by following requirments(not main class)
  * @since 2023-4-11
  * @author Dounguk kim
  */

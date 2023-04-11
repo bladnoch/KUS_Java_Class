@@ -34,13 +34,6 @@ public class Q4 {
             System.out.print(arr[i]+" ");
         }
     }
-    public static int[] upsideDown(int[] arr){
-        int[] updown=new int[ARRLEN];
-        for (int i=0;i<ARRLEN;i++){
-            updown[i]=arr[ARRLEN-(i+1)];
-        }
-        return updown;
-    }
     public static int[] makeArr(){
         int[] arr=new int[ARRLEN];
         Scanner sc=new Scanner(System.in);
@@ -60,7 +53,6 @@ public class Q4 {
     public static void main(String[] args){
         int[] arr=makeArr();
         bubbleSort(arr);
-        arr=upsideDown(arr);
         printArr(arr);
 
     }

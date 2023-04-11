@@ -10,7 +10,7 @@
     short cut: /** + [enter]
     
     /*
-        @author Dounguk Kim
+        @author [name]
         @catergory Test code
         @version v0.0.1
         @since 2023-04-10

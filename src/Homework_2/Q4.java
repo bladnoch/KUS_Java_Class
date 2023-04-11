@@ -40,6 +40,7 @@ public class Q4 {
 
         for (int i= 0;i<ARRLEN;i++){
             try{
+                System.out.print("정수 입력 : ");
                 arr[i]=sc.nextInt();
             } catch (InputMismatchException e){
                 System.out.println("Input value is not Integer, Please try it again!");

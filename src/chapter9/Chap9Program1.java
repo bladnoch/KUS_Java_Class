@@ -16,8 +16,6 @@ public class Chap9Program1 {
 
         withraw(20);
         System.out.println("Balance: "+balance);
-
-
     }
 
     private static double deposit(double amount){

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Q4.java
- * bubble sort, sort out biggest to smallest
+ * giving ieal weight of male, and female depends on their height
  * @since 2023-4-12
  * @author Dounguk kim
  */

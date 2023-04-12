@@ -5,12 +5,11 @@ package chapter9;
  * @since 2023-04-12
  * @author Dounguk Kim
  */
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Chp9Program2 {
+public class Chap9Program2 {
     public static void main(String[] args){
         Map catalog;
         catalog=new TreeMap();

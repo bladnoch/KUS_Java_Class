@@ -14,7 +14,6 @@ public class Q6 {
     final static int POPULATION=1000;
     public static void main(String[] args){
         BankAccount richGuy=new BankAccount("부자");
-
         BankAccount[] owner =new BankAccount[POPULATION];
 
         for (int i = 0;i<POPULATION;i++){

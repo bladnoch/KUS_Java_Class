@@ -1,6 +1,6 @@
 package Homework_2;
 /**
- * Q5.java
+ * BankAccount.java
  * To creat BankAccount class and make a part of banking system
  * @since 2023-4-12
  * @author Dounguk kim

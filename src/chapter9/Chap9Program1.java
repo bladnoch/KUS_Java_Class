@@ -2,6 +2,7 @@ package chapter9;
 
 /**
  * Chap9Program1.java
+ * to learn exception
  * @since 2023-04-10
  * @author Dounguk Kim
  */

@@ -11,7 +11,9 @@ package Homework_2;
 //잔고가 가장 큰 계좌의 이름과 잔를 출력
 
 public class Q6 {
+    final static int POPULATION=1000;
     public static void main(String[] args){
-        BankAccount a=new BankAccount();
+        BankAccount[] owner =new BankAccount[POPULATION];
+
     }
 }

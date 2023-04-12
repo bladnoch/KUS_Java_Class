@@ -13,7 +13,20 @@ package Homework_2;
 public class Q6 {
     final static int POPULATION=1000;
     public static void main(String[] args){
+        BankAccount richGuy=new BankAccount("부자");
+
         BankAccount[] owner =new BankAccount[POPULATION];
+
+        for (int i = 0;i<POPULATION;i++){
+            owner[i]=new BankAccount("주인_"+(i+1));
+            owner[i].setInitialBalance((int)(Math.random()*50000));
+            owner[i].addBalance(10000);
+
+            if(richGuy.getBalance()<owner[i].getBalance()){
+                richGuy=owner[i];
+            }
+        }
+        System.out.println(richGuy.getOwnerName()+"\n$"+(int)richGuy.getBalance());
 
     }
 }

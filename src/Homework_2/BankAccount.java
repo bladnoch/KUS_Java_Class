@@ -6,11 +6,27 @@ package Homework_2;
  * @author Dounguk kim
  */
 public class BankAccount {
-    public void setOwnerName(String value){}
-    public String getOwnerName(){return "0";}
-    public void setInitialBalance (double value){}
-    public double getBalance (double value){return 0;}
-    public void addBalance(double value){}
-    public void deductBalance(double value){}
+    private String ownerName;
+    private double balance;
+
+    public BankAccount(String name){
+        setOwnerName(name);
+    }
+
+    public void setOwnerName(String value){
+        ownerName=value;
+    }
+    public String getOwnerName(){return ownerName;}
+    public void setInitialBalance (double value){
+        balance=value;
+    }
+    public double getBalance(){return balance;}
+
+    public void addBalance(double value){
+        balance+=value;
+    }
+    public void deductBalance(double value){
+        balance-=value;
+    }
 
 }

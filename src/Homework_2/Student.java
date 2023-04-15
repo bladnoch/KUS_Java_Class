@@ -1,7 +1,7 @@
 package Homework_2;
 /**
  * Studnet.java
- * using for Q1. To make classes by following requirments(not main class)
+ * using for Q1. To make classes by following requirment(not main class)
  * @since 2023-4-11
  * @author Dounguk kim
  */
@@ -11,6 +11,10 @@ public class Student {
     private String studentSex;
     private double studentGPA;
 
+    /**
+     * default setting
+     * 기본 세팅
+     */
     public Student(){
         studentID=0;
         studentName="Unknown";
@@ -20,7 +24,7 @@ public class Student {
 
     /**
      *
-     * @return
+     * @return studnetID
      */
     public int getStudentID(){
         return studentID;
@@ -33,16 +37,35 @@ public class Student {
     public void setStudnetID(int sID){
         this.studentID=sID;
     }
+
+    /**
+     *
+     * @return studentSex
+     */
     public String getStudentSex(){
         return studentSex;
     }
+
+    /**
+     *
+     * @param sSex
+     */
     public void setStudnetSex(String sSex){
         this.studentSex=sSex;
     }
 
+    /**
+     *
+     * @return studentGPA
+     */
     public double getStudentGPA(){
         return studentGPA;
     }
+
+    /**
+     *
+     * @param sGPA
+     */
     public void setStudnetGPA(double sGPA){
         this.studentGPA=sGPA;
     }

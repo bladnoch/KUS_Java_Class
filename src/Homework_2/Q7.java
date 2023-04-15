@@ -10,6 +10,11 @@ import static java.lang.Math.random;
  * @author Dounguk kim
  */
 public class Q7 {
+    /**
+     * get input and calculate that who won
+     * 입력을 받고 누가 이겼는지 계산한 후 출력
+     * @param value
+     */
     public static void winner(String[] value){
         Scanner sc=new Scanner(System.in);
         String me;
@@ -18,7 +23,7 @@ public class Q7 {
         comp=(int)(random()*3);
         System.out.print("GAME START\n(rock, scissors, paper)\nPlayer: ");
         me=sc.next();
-        if(me.equals(value[0]) ){ //rock
+        if(me.equals(value[0]) ){ //player: rock
             if(comp==0){
                 System.out.println("computer: paper\n You win!");
             } else if (comp==1) {
@@ -28,7 +33,7 @@ public class Q7 {
                 System.out.println("computer: rock\n You lose!");
             }
         }
-        else if(me.equals(value[1]) ){ //scissors
+        else if(me.equals(value[1]) ){ //player: scissors
             if(comp==0){
                 System.out.println("computer: rock\n Draw!");
             } else if (comp==1) {
@@ -38,7 +43,7 @@ public class Q7 {
                 System.out.println("computer: scissors\n You win!");
             }
         }
-        else if(me.equals(value[2]) ){ //paper
+        else if(me.equals(value[2]) ){ //player: paper
             if(comp==0){
                 System.out.println("computer: scissors\n You lose!");
             } else if (comp==1) {
@@ -49,7 +54,7 @@ public class Q7 {
             }
         }
         else{
-            System.out.println("GAME OVER..");
+            System.out.println("GAME OVER.."); //not rock, paper, scissors
         }
         System.out.println("");
 

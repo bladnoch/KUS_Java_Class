@@ -12,6 +12,11 @@ import java.util.TreeMap;
  */
 
 public class Q8 {
+    /**
+     * save words in Map dic
+     * Map dic에 단어들을 저장
+     * @param dic
+     */
     public static void setDictionary(Map dic){
         dic.put("culture","문화");
         dic.put("experience","경험");
@@ -25,6 +30,12 @@ public class Q8 {
         dic.put("source","출처");
         dic.put("is","는");
     }
+
+    /**
+     * start translate get input and print output
+     * 번역을 시작합니다. 인풋을 받고 아웃풋을 출력해준다.
+     * @param dic
+     */
     public static void search(Map dic){
         Scanner sc=new Scanner(System.in);
         String[] word;
@@ -32,10 +43,10 @@ public class Q8 {
         System.out.println(dic.keySet());
         System.out.print("input: ");
 
-        word=sc.nextLine().split(" ");
+        word=sc.nextLine().split(" "); //get input, and split sentence to words
 
         System.out.print("output: ");
-        for (int i=0;i<word.length;i++){
+        for (int i=0;i<word.length;i++){    //print translated words
             if(dic.containsKey(word[i])){
                 System.out.print(dic.get(word[i])+" ");
             }

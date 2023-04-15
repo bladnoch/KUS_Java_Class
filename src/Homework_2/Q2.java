@@ -18,7 +18,15 @@ public class Q2 {
         int max=0;
         int ave;
         System.out.println("Please enter Integer");
-
+        max=getMax(num, sc);
+        ave=getSum(num)/INPUT;
+        printIt(max,ave);
+    }
+    public static void printIt(int max, int ave){
+        System.out.println("Maximum value is "+max+"\nAverage value is "+ave);
+    }
+    public static int getMax(int[] num, Scanner sc){
+        int max=0;
         for( int i =0;i<INPUT;i++){
             System.out.print((i+1)+"th value >> ");
 
@@ -34,10 +42,13 @@ public class Q2 {
                 max=num[i];
             }
         }
+        return max;
+    }
+    public static int getSum(int[] num){
+        int sum=0;
         for (int i=0;i<INPUT;i++){
             sum+=num[i];
         }
-        ave=sum/INPUT;
-        System.out.println("Maximum value is "+max+"\nAverage value is "+ave);
+        return sum;
     }
 }

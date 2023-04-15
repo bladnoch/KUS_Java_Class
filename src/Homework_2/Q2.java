@@ -18,18 +18,34 @@ public class Q2 {
         int max=0;
         int ave;
         System.out.println("Please enter Integer");
-        max=getMax(num, sc);
-        ave=getSum(num)/INPUT;
-        printIt(max,ave);
+        max=getMax(num, sc);    //get max
+        ave=getSum(num)/INPUT;  //get average
+        printIt(max,ave);       //print max, average
     }
+
+    /**
+     * print max value and average value
+     * 최대, 평균을 프린트
+     * @param max
+     * @param ave
+     */
     public static void printIt(int max, int ave){
         System.out.println("Maximum value is "+max+"\nAverage value is "+ave);
     }
+
+    /**
+     * get maximum value
+     * 최대값을 얻는다.
+     * @param num
+     * @param sc
+     * @return max
+     */
     public static int getMax(int[] num, Scanner sc){
         int max=0;
         for( int i =0;i<INPUT;i++){
             System.out.print((i+1)+"th value >> ");
-
+            // get input and check exception.
+            // 입력 받고 예외처리
             try {
                 num[i]=sc.nextInt();
             } catch (InputMismatchException e){
@@ -37,13 +53,19 @@ public class Q2 {
                 sc.nextLine();
                 i--;
             }
-
             if(max<num[i]){
                 max=num[i];
             }
         }
         return max;
     }
+
+    /**
+     * add all numbers
+     * 모든 숫자를 더한다.
+     * @param num
+     * @return
+     */
     public static int getSum(int[] num){
         int sum=0;
         for (int i=0;i<INPUT;i++){

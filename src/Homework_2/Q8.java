@@ -33,9 +33,7 @@ public class Q8 {
         System.out.print("input: ");
 
         word=sc.nextLine().split(" ");
-//        for (int i=0;i<word.length;i++){
-//            System.out.print(word[i]+" ");
-//        }
+
         System.out.print("output: ");
         for (int i=0;i<word.length;i++){
             if(dic.containsKey(word[i])){
@@ -51,11 +49,5 @@ public class Q8 {
         Map dictionary=new TreeMap();
         setDictionary(dictionary);
         search(dictionary);
-
-
-
-
-
-
     }
 }

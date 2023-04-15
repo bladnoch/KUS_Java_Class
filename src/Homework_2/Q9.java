@@ -1,7 +1,6 @@
 package Homework_2;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,25 +12,25 @@ import java.util.Scanner;
  * @author Dounguk kim
  */
 
-class AA{
+class TwoInt{
     int a=0;
     public void getSum(int a,int b){
         this.a=a+b;
     }
 }
-class BB extends AA{
+class ThreeInt extends TwoInt{
     public void getSum(int a,int b, int c){
         this.a=a+b+c;
     }
 }
-class CC extends BB{
+class IntList extends ThreeInt{
     public void getSum(int[] a){
         for (int i=0;i<a.length;i++){
             this.a+=a[i];
         }
     }
 }
-class DD extends CC{
+class DoubleList extends IntList{
     public void getSum(double[] db){
         double sum=this.a;
         for (int i=0;i<db.length;i++){
@@ -42,7 +41,7 @@ class DD extends CC{
 }
 
 public class Q9 {
-    public static void goClass(DD s,int count, int[] iInput){
+    public static void goClass(DoubleList s,int count, int[] iInput){
         if (count==2){
             s.getSum(iInput[0],iInput[1]);
         }
@@ -55,7 +54,7 @@ public class Q9 {
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        DD s=new DD();
+        DoubleList s=new DoubleList();
 
         List<Integer>num=new ArrayList<>();
         List<Double>num2=new ArrayList<>();
@@ -64,7 +63,6 @@ public class Q9 {
         int count=0;
         int count2=0;
         String over;
-
 
         while(true){
             System.out.println("Put numbers(더이상 원하지 않을 경우 \'over\'을 입력해 주세요) :");

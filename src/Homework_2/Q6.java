@@ -16,16 +16,24 @@ public class Q6 {
         BankAccount richGuy=new BankAccount("부자");
         BankAccount[] owner =new BankAccount[POPULATION];
 
+        setPeople(owner);
+        highestBalance(richGuy, owner);
+    }
+    public static void setPeople(BankAccount[] owner){
         for (int i = 0;i<POPULATION;i++){
             owner[i]=new BankAccount("주인_"+(i+1));
             owner[i].setInitialBalance((int)(Math.random()*50000));
             owner[i].addBalance(10000);
+        }
 
-            if(richGuy.getBalance()<owner[i].getBalance()){
-                richGuy=owner[i];
+    }
+    public static void highestBalance(BankAccount richGuy,BankAccount[] owner){
+        for (int i = 0;i<POPULATION;i++) {
+            if (richGuy.getBalance() < owner[i].getBalance()) {
+                richGuy = owner[i];
             }
         }
         System.out.println(richGuy.getOwnerName()+"\n$"+(int)richGuy.getBalance());
-
     }
+
 }

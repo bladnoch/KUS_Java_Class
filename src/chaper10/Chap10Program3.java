@@ -13,9 +13,9 @@ public class Chap10Program3 {
     public static void main(String[] args) throws IOException{
         File outFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chaper10/example2.data");
         FileOutputStream outStream=new FileOutputStream(outFile);
-        DataOutputStream outDataStream=new DataOutputStream(outStream);
+        DataOutputStream outDataStream=new DataOutputStream(outStream);// low to high
 
-
+//change types by order
         outDataStream.writeInt(44);
         outDataStream.writeBoolean(true);
         outDataStream.writeDouble(7.2);

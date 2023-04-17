@@ -1,4 +1,4 @@
-package chaper10;
+package chapter10;
 /**
  * Chap10Program2.java
  * Example of file binary output using fileoutputstream(low level로 써진 파일을 사람이 읽을 수 있게 바꾸기)

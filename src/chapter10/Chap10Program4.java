@@ -1,4 +1,4 @@
-package chaper10;
+package chapter10;
 /**
  * Chap10Program4.java
  * Example of file high-level input

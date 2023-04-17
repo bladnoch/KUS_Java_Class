@@ -1,4 +1,4 @@
-package chaper10;
+package chapter10;
 /**
  * SomeFileMethods.java
  * print files in folder

@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Chap10Program2 {
     public static void main(String[] args) throws IOException {
-        File inFile =new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chaper10/Program1.txt");
+        File inFile =new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/Program1.txt");
         FileInputStream inStream= new FileInputStream(inFile);
 
         int filesize=(int)inFile.length();//어레이 값을 구하기 위해 사용

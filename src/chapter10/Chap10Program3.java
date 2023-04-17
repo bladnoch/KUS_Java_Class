@@ -11,7 +11,7 @@ import java.io.*;
 
 public class Chap10Program3 {
     public static void main(String[] args) throws IOException{
-        File outFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chaper10/example2.data");
+        File outFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/example2.data");
         FileOutputStream outStream=new FileOutputStream(outFile);
         DataOutputStream outDataStream=new DataOutputStream(outStream);// low to high
 

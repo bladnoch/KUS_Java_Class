@@ -9,7 +9,7 @@ import java.io.*;
 
 public class Chap10Program4 {
     public static void main(String[] args) throws IOException{
-        File inFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chaper10/example2.data");
+        File inFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/example2.data");
         FileInputStream inStream=new FileInputStream(inFile);
         DataInputStream inDataStream=new DataInputStream(inStream);
 

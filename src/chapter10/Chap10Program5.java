@@ -9,7 +9,7 @@ import java.io.*;
  */
 public class Chap10Program5 {
     public static void main(String[] args) throws IOException{
-        File outFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/example2.data");
+        File outFile = new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/std.data");
         FileOutputStream outStream=new FileOutputStream(outFile);
         PrintWriter outPW=new PrintWriter(outStream); //사람이 읽을 수 있게 한다.
 

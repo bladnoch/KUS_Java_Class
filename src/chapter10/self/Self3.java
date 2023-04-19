@@ -8,14 +8,14 @@ import java.io.IOException;
 public class Self3 {
     public static void main(String[] args) throws IOException {
         File outFile= new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/self/self3.txt");
-        FileOutputStream outStream= new FileOutputStream(outFile);
-        DataOutputStream outData= new DataOutputStream(outStream);
+        FileOutputStream outS=new FileOutputStream(outFile);
+        DataOutputStream dataO=new DataOutputStream(outS);
 
-        outData.writeBoolean(true);
-        outData.writeDouble(2304234.23);
-        outData.writeInt(691214);
+        dataO.writeInt(1234);
+        dataO.writeDouble(23.5);
+        dataO.writeBoolean(true);
 
-        outData.close();
+        dataO.close();
 
     }
 }

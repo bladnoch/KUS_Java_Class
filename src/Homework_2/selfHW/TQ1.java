@@ -25,13 +25,16 @@ public class TQ1 {
             std[i].studentName=((String)ch)+name.get(i);
         }
     }
-    public static void setID(){
-
+    public static void setID(ArrayList stdID, Random randome){
+        while(stdID.size()<10000){
+            
+        }
     }
     public static void main(String[] args){
         Std[] std=new Std[10000];
         Random random=new Random();
         ArrayList<String> name=new ArrayList<>();
+        ArrayList<Integer> stdID=new ArrayList<>();
         int count=0;
 
         for (int i=0; i< 10000;i++){
@@ -39,7 +42,7 @@ public class TQ1 {
             std[i].studentName="";
         }
         setName(name,random,std);
-        setID();
+//        setID();
 
         for(int i=0;i<10000;i++){
             System.out.println(std[i].studentName);

@@ -8,15 +8,14 @@ import java.io.IOException;
 public class Self4 {
     public static void main(String[] args) throws IOException {
         File inFile=new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/self/self3.txt");
-        FileInputStream inStream=new FileInputStream(inFile);
-        DataInputStream inData= new DataInputStream(inStream);
+        FileInputStream inS=new FileInputStream(inFile);
+        DataInputStream dataI=new DataInputStream(inS);
 
-        boolean a= inData.readBoolean();
-        double b=inData.readDouble();
-        int c= inData.readInt();
+        int a= dataI.readInt();
+        double b= dataI.readDouble();
+        boolean c= dataI.readBoolean();
 
-        System.out.println(a+"\n"+b+"\n"+c);
-
+        System.out.println(a+" "+b +" "+c);
 
     }
 }

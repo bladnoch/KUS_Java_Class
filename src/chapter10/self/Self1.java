@@ -9,7 +9,7 @@ public class Self1 {
         File outF=new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/self/self1.txt");
         FileOutputStream outS=new FileOutputStream(outF);
 
-        byte[] byteA={1,2,3,3,55,9};
+        byte[] byteA={10,20,30,40,10};
         outS.write(byteA);
         outS.close();
 

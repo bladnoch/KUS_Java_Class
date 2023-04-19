@@ -1,5 +1,4 @@
 package chapter10.self;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,13 +9,12 @@ public class Self2 {
         File inF=new File("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter10/self/self1.txt");
         FileInputStream inS=new FileInputStream(inF);
 
-
         int len=(int)inF.length();
-        byte[] bA=new byte[len];
+        byte[] byteA=new byte[len];
 
-        inS.read(bA);
-        for (int i=0;i<len;i++){
-            System.out.println(bA[i]);
+        inS.read(byteA);
+        for(int i=0; i< len;i++){
+            System.out.println(byteA[i]);
         }
     }
 }

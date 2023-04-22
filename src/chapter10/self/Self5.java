@@ -19,6 +19,8 @@ public class Self5 {
 
         outWrite.println("this is Daniel Kim");
         outWrite.println(true);
+        outWrite.println("hello");
+        outWrite.println("world");
 
         outWrite.close();
 

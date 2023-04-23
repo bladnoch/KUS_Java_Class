@@ -43,13 +43,10 @@ public class TQ7 {
 
         if (player.equals(str[0]) || player.equals(str[1]) || player.equals(str[2])){
             if (player.equals(str[0])){ //플레이어 sciss
-                playerNum=0;
                 calc(0,n);
             } else if (player.equals(str[1])) { //rock
-                playerNum=1;
                 calc(1,n);
             }else { //paper
-                playerNum=2;
                 calc(2,n);
             }
         }

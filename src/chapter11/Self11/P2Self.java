@@ -5,6 +5,4 @@ public class P2Self {
         PntColor pc=new PntColor(5,10, "purple");
         pc.showPointColor();
     }
-
-
 }

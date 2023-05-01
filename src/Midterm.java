@@ -13,6 +13,8 @@ public class Midterm{
     }
 }
 
+//Midterm_2021270682_DoungukKim
+
 // 오버라이드 사용 Q9
 
 // 랜덤 값 만들기 Q1

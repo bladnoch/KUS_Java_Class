@@ -10,4 +10,9 @@ package chapter11.Self11;
         매인 클래스는 따로 만들어야 한다.
  */
 public class P1Self {
+    public static void main(String[] args){
+        CustomCar myCar=new CustomCar();
+        myCar.setAll();
+        myCar.printAll();
+    }
 }

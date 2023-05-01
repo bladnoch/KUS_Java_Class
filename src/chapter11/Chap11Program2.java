@@ -2,7 +2,7 @@ package chapter11;
 
 /**
  *
- * Chapt11Program2.java
+ * Chap11Program2.java
  * @author DounukKim
  * @version v0.1
  * @since 5-1-2023

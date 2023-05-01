@@ -20,6 +20,7 @@ public class Chap11Program1 {
     public static void main(String[] args){
         Student11 s=new Student11();
         s.set();
+        s.height=181; //protect일 경우 값을 바꾸는 방법
         s.display();
     }
 }

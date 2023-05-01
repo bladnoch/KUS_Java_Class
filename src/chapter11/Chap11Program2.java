@@ -9,7 +9,7 @@ package chapter11;
  */
 public class Chap11Program2 {
     public static void main(String[] args){
-//        ColorPoint cp=new ColorPoint(5,6,"blue");
-//        cp.showColorPoint();
+        ColorPoint cp=new ColorPoint(5,6,"blue");
+        cp.showColorPoint();
     }
 }

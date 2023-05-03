@@ -1,4 +1,4 @@
-package chapter11.Chap11Program4Files;
+package chapter11.Program4;
 
 /**
  *

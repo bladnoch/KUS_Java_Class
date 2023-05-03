@@ -1,6 +1,4 @@
-package chapter11;
-
-import Homework_2.Student;
+package chapter11.Program1;
 
 /**
  * Chap11Program1 : to make Person - Student11 - Chap11Program1 relationship to study Inheritance(상속).

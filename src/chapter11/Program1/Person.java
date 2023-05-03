@@ -1,4 +1,4 @@
-package chapter11;
+package chapter11.Program1;
 /**
  * Person.java
  * @author DoungukKim

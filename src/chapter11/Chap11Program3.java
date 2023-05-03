@@ -1,7 +1,7 @@
 package chapter11;
 
 /**
- *
+ * Line, Rect, Circle extends Shape class
  * Chapt11Program3.java
  * @author DounukKim
  * @version v0.1

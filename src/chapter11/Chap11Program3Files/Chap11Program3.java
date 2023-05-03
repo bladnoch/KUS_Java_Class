@@ -1,4 +1,4 @@
-package chapter11;
+package chapter11.Chap11Program3Files;
 
 /**
  * Line, Rect, Circle extends Shape class
@@ -17,7 +17,12 @@ public class Chap11Program3 {
         paint(new Circle());
 
     }
-    static void paint(Shape p){
+
+    /**
+     * Paint function
+     * @param p
+     */
+    static void paint(Shape p){ //받는 객체를 부모로 해야 모든 자식값을 적용할 수 있다.
         p.draw();
     }
 }

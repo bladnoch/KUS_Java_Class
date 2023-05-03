@@ -10,5 +10,5 @@ package chapter11.Chap11Program4Files;
 public class Weapon {
     protected int fire(){
         return 1;
-    }
+    } //protected 는 부모간의 허용이기 때문에 protected가 있으면 클래스 상속을 하고있다고 유추할 수 있다.
 }

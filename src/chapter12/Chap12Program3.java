@@ -35,6 +35,7 @@ class MyActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e){
         JButton b=(JButton) e.getSource();
         if (b.getText().equals("Action")){
+
             System.out.println("click");
         } else {
             b.setText("Action");

@@ -1,0 +1,44 @@
+package chapter12.Program4;
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+
+public class Chap12Program4 extends JFrame {
+    private JLabel simpleLabel=new JLabel("hello");
+
+    public Chap12Program4(){
+        setTitle("example of mouse event");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container c=getContentPane();
+        c.addMouseListener(new MyMouseListener());
+
+        c.setLayout(null);
+        simpleLabel.setSize(50,20);
+        simpleLabel.setLocation(30,30);
+        c.add(simpleLabel);
+
+        setSize(250,250);
+        setVisible(true);
+    }
+
+    public static void main(String[] args){
+        new Chap12Program4();
+    }
+
+    class MyMouseListener implements MouseListener {
+        public void mousePressed(MouseEvent e){
+            int x=e.getX();
+            int y=e.getY();
+            simpleLabel.setLocation(x,y);
+        }
+        public void mouseReleased(MouseEvent e){}
+        public void mouseClicked(MouseEvent e){}
+        public void mouseEntered(MouseEvent e){}
+        public void mouseExited(MouseEvent e){}
+    }
+}
+

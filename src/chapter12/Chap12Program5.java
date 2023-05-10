@@ -18,10 +18,10 @@ public class Chap12Program5 extends JFrame{
     private JLabel simpleLabel=new JLabel("hello");
 
     public Chap12Program5(){
-        setTitle("example of mouse event");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Container c=getContentPane();
-        c.addMouseListener(new Chap12Program5.MyMouseListener());
+        setTitle("example of mouse event"); //타이틀 내용
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창 닫으면 종료
+        Container c=getContentPane(); //c변수 안에 contentPane 생성
+        c.addMouseListener(new Chap12Program5.MyMouseListener()); //
 
         c.setLayout(null);
         simpleLabel.setSize(50,20);

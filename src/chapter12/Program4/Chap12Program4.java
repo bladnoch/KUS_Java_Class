@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /**
- set text on place where I clicked
+ set text on place where I clicked (implements with MouseListener)
  @version v0.0.1
  @since 2023-05-10
  @author Dounguk Kim

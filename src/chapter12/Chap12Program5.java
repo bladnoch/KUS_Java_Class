@@ -7,6 +7,13 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ set text on place where I clicked with extends MouseAdapter)
+ @version v0.0.1
+ @since 2023-05-10
+ @author Dounguk Kim
+ */
+
 public class Chap12Program5 extends JFrame{
     private JLabel simpleLabel=new JLabel("hello");
 

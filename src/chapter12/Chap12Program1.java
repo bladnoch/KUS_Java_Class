@@ -12,6 +12,7 @@ import javax.swing.*;
 public class Chap12Program1 extends JFrame {
     public Chap12Program1(){
        this.setTitle("Welcome to GUI environmnet!");
+       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        this.setSize(300,300);
        this.setVisible(true);
     }

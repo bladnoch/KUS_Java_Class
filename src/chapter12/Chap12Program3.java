@@ -2,8 +2,7 @@ package chapter12;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 /**
  add class that implements main class.
@@ -34,14 +33,15 @@ public class Chap12Program3 extends JFrame {
     }
 }
 
-class MyActionListener implements ActionListener{
-    public void actionPerformed(ActionEvent e){
-        JButton b=(JButton) e.getSource();
-        if (b.getText().equals("Action")){
-            System.out.println("click");
-        } else {
-            b.setText("Action");
-        }
-
-    }
-}
+//class MyActionListener implements ActionListener{
+//    public void actionPerformed(ActionEvent e){
+//        JButton b=(JButton) e.getSource();
+//        if (b.getText().equals("Action")){
+//            System.out.println("click");
+//            b.setText("No Action");
+//        } else {
+//            b.setText("Action");
+//        }
+//
+//    }
+//}

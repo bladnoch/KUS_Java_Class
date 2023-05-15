@@ -2,6 +2,7 @@ package chapter12;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 
 /**
@@ -19,10 +20,14 @@ public class Chap12Program3 extends JFrame {
 
         c.setLayout(new FlowLayout());
 
-        JButton btn=new JButton("Action");
+        JButton btn=new JButton("ON/OFF");
+        JButton btn2=new JButton("Hey/Hello");
+
         btn.addActionListener(new MyActionListener());
+        btn2.addActionListener(new MyActionListener2());
 
         c.add(btn);
+        c.add(btn2);
 
         setSize(350,150);
         setVisible(true);

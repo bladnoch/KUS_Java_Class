@@ -17,9 +17,12 @@ public class Chap12Program3 extends JFrame {
         setTitle("Event example");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container c=getContentPane();
+
         c.setLayout(new FlowLayout());
+
         JButton btn=new JButton("Action");
         btn.addActionListener(new MyActionListener());
+
         c.add(btn);
 
         setSize(350,150);
@@ -35,7 +38,6 @@ class MyActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e){
         JButton b=(JButton) e.getSource();
         if (b.getText().equals("Action")){
-
             System.out.println("click");
         } else {
             b.setText("Action");

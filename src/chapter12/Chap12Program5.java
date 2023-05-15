@@ -1,7 +1,5 @@
 package chapter12;
 
-import chapter12.Program4.Chap12Program4;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;

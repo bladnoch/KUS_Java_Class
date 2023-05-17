@@ -1,7 +1,7 @@
 package chapter12.Program5;
 
-import chapter12.Program4.Chap12Program4;
 
+import chapter12.Program4.Chap12Program4;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -16,13 +16,13 @@ import java.awt.event.MouseListener;
  */
 
 public class Chap12Program5 extends JFrame{
-    private JLabel simpleLabel=new JLabel("hello");
+    static JLabel simpleLabel=new JLabel("hello");
 
     public Chap12Program5(){
         setTitle("example of mouse event"); //타이틀 내용
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창 닫으면 종료
         Container c=getContentPane(); //c변수 안에 contentPane 생성
-        c.addMouseListener(new MyMouseListener2(simpleLabel));
+        c.addMouseListener(new MyMouseListener2());
 
         c.setLayout(null);
         simpleLabel.setSize(50,20);
@@ -34,12 +34,9 @@ public class Chap12Program5 extends JFrame{
         setSize(250,250);
         setVisible(true);
     }
-    public void setSimpleLabel(JLabel simple){
-
-    }
 
     public static void main(String[] args){
-        new Chap12Program4();
+        new Chap12Program5();
     }
 
 

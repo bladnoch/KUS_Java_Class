@@ -5,15 +5,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MyMouseListener implements MouseListener {
-    private JLabel sl;
-
-    public void setSL(JLabel sLabel, int x, int y){
-        sl=sLabel;
-        sl.setLocation(x,y);
-    }
-    public JLabel getSL(){
-        return sl;
-    }
     public void mousePressed(MouseEvent e){
 
         int x=e.getX();

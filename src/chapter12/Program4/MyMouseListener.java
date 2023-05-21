@@ -11,8 +11,8 @@ public class MyMouseListener implements MouseListener {
         int y=e.getY();
 
 
-//        simpleLabel.setLocation(x,y);
-//        simpleLabel.setText(x+", "+y);
+        Chap12Program4.simpleLabel.setLocation(x,y);
+        Chap12Program4.simpleLabel.setText(x+", "+y);
     }
     public void mouseReleased(MouseEvent e){}
     public void mouseClicked(MouseEvent e){}

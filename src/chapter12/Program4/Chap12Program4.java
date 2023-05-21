@@ -13,7 +13,7 @@ import java.awt.event.MouseListener;
  @author Dounguk Kim
  */
 public class Chap12Program4 extends JFrame{
-    JLabel simpleLabel=new JLabel("hello");
+    static JLabel simpleLabel=new JLabel("hello");
 
     public Chap12Program4(){
         setTitle("example of mouse event");

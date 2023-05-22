@@ -30,7 +30,6 @@ public class Chap12Program5 extends JFrame{
         c.add(simpleLabel);
 
 
-
         setSize(250,250);
         setVisible(true);
     }

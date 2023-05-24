@@ -1,4 +1,4 @@
-package chapter12;
+package chapter12.Program1;
 
 import javax.swing.*;
 

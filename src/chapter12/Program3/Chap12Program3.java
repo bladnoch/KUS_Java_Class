@@ -1,8 +1,9 @@
-package chapter12;
+package chapter12.Program3;
+
+import chapter12.MyActionListener2;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
 
 /**

@@ -3,6 +3,13 @@ package chapter13.Program2;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * practice second Theread study
+ * @since 5-22-2023
+ * @author Dounguk Kim
+ * @version v0.0.1
+ */
+
 public class Chapter13Program2 extends JFrame {
     public Chapter13Program2(){
         this.setTitle("Timer Example");

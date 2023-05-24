@@ -4,6 +4,11 @@ import javax.swing.*;
 
 public class TimerThread2 extends Thread{
     private JLabel timeLabel;
+
+    /**
+     * Constructor
+     * @param timerLabel JLabel that has setFont
+     */
     public TimerThread2(JLabel timerLabel){this.timeLabel=timerLabel;}
     @Override
     public void run() {
@@ -12,7 +17,7 @@ public class TimerThread2 extends Thread{
             timeLabel.setText(Integer.toString(n));
             n++;
             try{
-                Thread.sleep(1000);
+                Thread.sleep(1000);//
             } catch(InterruptedException e){
                 return;
             }

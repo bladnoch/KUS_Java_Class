@@ -11,7 +11,9 @@ import java.awt.*;
  */
 
 
-
+/**
+ * 쓰레드는 하나만 사용하지만 어떻게 사용되는지를 알려주는 예제
+ */
 public class Chapter13Program1 extends JFrame {
     public Chapter13Program1(){
         this.setTitle("13-1");

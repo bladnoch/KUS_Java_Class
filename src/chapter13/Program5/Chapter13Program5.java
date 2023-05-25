@@ -1,7 +1,7 @@
 package chapter13.Program5;
 
 /**
- * using thread on 13-4 program
+ * thread 숫자에 따라 elapsed time이 어떻게 바뀌는지 확인
  * @since 5-24-2023
  * @version v0.0.1
  * @author doungukkim

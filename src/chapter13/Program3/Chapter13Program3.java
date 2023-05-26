@@ -23,11 +23,11 @@ public class Chapter13Program3 extends JFrame {
 
         FlickeringLabel fLabel=new FlickeringLabel("Blink",500);
         JLabel label=new JLabel("no blink");
-        FlickeringLabel flabel2=new FlickeringLabel("Blink independently",300);
+        FlickeringLabel fLabel2=new FlickeringLabel("Blink independently",300);
 
         c.add(fLabel);
         c.add(label);
-        c.add(flabel2);
+        c.add(fLabel2);
 
         setSize(300,150);
         setVisible(true);

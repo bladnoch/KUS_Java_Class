@@ -24,8 +24,8 @@ public class FlickeringLabel2 extends JLabel implements Runnable {
             else {
                 setBackground(Color.BLUE);
             }
-            if(n==0){n=1;}
-            else{n=0;}
+            if(n==0)n=1;
+            else n=0;
             try{
                 Thread.sleep(delay);
             } catch (InterruptedException e){
@@ -33,4 +33,5 @@ public class FlickeringLabel2 extends JLabel implements Runnable {
             }
         }
     }
+
 }

@@ -9,7 +9,7 @@ public class Chapter13Practice3 extends JFrame {
     public Chapter13Practice3(){
         setTitle("practice 13-3");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Container c=new Container();
+        Container c=getContentPane();
         c.setLayout(new FlowLayout());
 
         FlickeringLabel2 fLabel=new FlickeringLabel2("Hello, ",500);

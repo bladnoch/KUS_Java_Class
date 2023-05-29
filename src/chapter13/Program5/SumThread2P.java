@@ -1,11 +1,11 @@
 package chapter13.Program5;
 
-public class SumThread extends Thread{
+public class SumThread2P extends Thread{
     public static long sum;
     private  int start;
     private int end;
 
-    public SumThread(int start, int end){
+    public SumThread2P(int start, int end){
         this.start=start;
         this.end=end;
     }

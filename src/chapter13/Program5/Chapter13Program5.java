@@ -16,19 +16,19 @@ public class Chapter13Program5 {
      */
     public Chapter13Program5() throws InterruptedException{
         long start =System.currentTimeMillis();
-        SumThread.sum=0;
+        SumThread2P.sum=0;
 
-        SumThread[] threads=new SumThread[NUM_THREAD];
+        SumThread2P[] threads=new SumThread2P[NUM_THREAD];
 
         for (int i=0;i<threads.length;i++){
-            threads[i]=new SumThread(i*(REP_TIMES/NUM_THREAD),
+            threads[i]=new SumThread2P(i*(REP_TIMES/NUM_THREAD),
                     (i+1)*(REP_TIMES/NUM_THREAD)-1);
             threads[i].start();
         }
         for(int i=0;i<threads.length;i++){
             threads[i].join(); //병렬 컴퓨팅한 것들을 합친다.
         }
-        System.out.println("Toral sum: "+SumThread.sum);
+        System.out.println("Toral sum: "+ SumThread2P.sum);
         long end=System.currentTimeMillis();
 
         System.out.println("Elapsed time: "+(end-start)/1000.0+"sec.");

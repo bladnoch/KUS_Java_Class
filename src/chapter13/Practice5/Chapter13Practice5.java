@@ -1,10 +1,12 @@
 package chapter13.Practice5;
 
-import chapter13.Program5.SThread;
+//import chapter13.Program5.SThread;
 
+
+import chapter13.Program5.Chapter13Program5;
 
 public class Chapter13Practice5 {
-    public static final int NUM_THREAD=16;
+    public static final int NUM_THREAD=4;
     public static final int REP_TIMES=2000000000;
 
     public Chapter13Practice5() throws InterruptedException{
@@ -27,7 +29,8 @@ public class Chapter13Practice5 {
 
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         new Chapter13Practice5();
+        new Chapter13Program5();
     }
 }

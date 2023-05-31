@@ -4,6 +4,12 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * Server side
+ * @author Dounguk Kim
+ * @since 5-31-2023
+ * @version v0.0.1
+ */
 public class Chap14Program2 {
     public static void main(String[] args){
         Socket socket=null;

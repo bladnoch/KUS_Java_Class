@@ -5,6 +5,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * Client side
+ * @author Dounguk Kim
+ * @since 5-31-2023
+ * @version v0.0.1
+ */
 public class Chap14Program1 {
     public static void main(String[] args){
         ServerSocket listener =null;

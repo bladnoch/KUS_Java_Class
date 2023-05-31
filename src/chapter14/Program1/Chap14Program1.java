@@ -18,7 +18,7 @@ public class Chap14Program1 {
         Scanner sc=new Scanner(System.in);
 
         try{
-            listener=new ServerSocket(9999); //개발자가 사용하기 위한 테스트용
+            listener=new ServerSocket(9999); //개발자가 사용하기 위한 테스트용, 서버로 사용하기 위해서는 고정 ip를 사용해야 한다.
             System.out.println("Waiting connection...");
 
             socket=listener.accept();
@@ -27,6 +27,9 @@ public class Chap14Program1 {
             BufferedReader in =new BufferedReader(new InputStreamReader(socket.getInputStream()));
             BufferedWriter out =new BufferedWriter(new OutputStreamWriter((socket.getOutputStream())));
 
+            /**
+             * 서버를 while loop으로 24/7 작동하게 한다.
+             */
             while(true){
                 String inputMessage=in.readLine();
 

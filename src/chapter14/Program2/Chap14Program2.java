@@ -22,7 +22,7 @@ public class Chap14Program2 {
             BufferedWriter out =new BufferedWriter((new OutputStreamWriter(socket.getOutputStream())));
 
             while(true){
-                System.out.println("Client>>");
+                System.out.println("Client>>");         //chanage
                 String outputMessage=sc.nextLine();
 
                 if(outputMessage.equalsIgnoreCase("bye")){

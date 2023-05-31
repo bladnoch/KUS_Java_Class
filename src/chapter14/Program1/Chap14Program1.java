@@ -18,7 +18,7 @@ public class Chap14Program1 {
         Scanner sc=new Scanner(System.in);
 
         try{
-            listener=new ServerSocket(9999);
+            listener=new ServerSocket(9999); //개발자가 사용하기 위한 테스트용
             System.out.println("Waiting connection...");
 
             socket=listener.accept();

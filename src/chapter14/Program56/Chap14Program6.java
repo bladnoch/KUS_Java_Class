@@ -14,4 +14,8 @@ public class Chap14Program6 extends JFrame {
     private Socket socket=null;
     private BufferedReader in = null;
     private BufferedWriter out=null;
+
+    public Chap14Program6(){
+        super("calc client");
+    }
 }

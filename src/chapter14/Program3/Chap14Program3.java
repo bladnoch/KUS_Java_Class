@@ -10,7 +10,7 @@ public class Chap14Program3 {
         StringTokenizer st=new StringTokenizer(exp," ");
         if(st.countTokens()!=3) return "error";
 
-        String res="";
+        String res=" ";
         int op1=Integer.parseInt(st.nextToken());
         String opcode=st.nextToken();
         int op2=Integer.parseInt(st.nextToken());

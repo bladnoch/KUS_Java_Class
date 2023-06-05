@@ -9,6 +9,7 @@ public class MenuBarSample
     MenuBarSample(){
         JFrame f= new JFrame("Menu and MenuItem Example");
         JMenuBar mb=new JMenuBar();
+
         menu=new JMenu("Menu");
         menu2=new JMenu("Menu2");
         submenu=new JMenu("Sub Menu");
@@ -19,6 +20,7 @@ public class MenuBarSample
         i5=new JMenuItem("Item 5");
         i6=new JMenuItem("Item 6");
         i7=new JMenuItem("Item 7");
+
         menu.add(i1); menu.add(i2); menu.add(i3);
         menu2.add(i6);
         menu2.add(i7);
@@ -32,7 +34,7 @@ public class MenuBarSample
         f.setLayout(null);
         f.setVisible(true);
     }
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         new MenuBarSample();
     }}

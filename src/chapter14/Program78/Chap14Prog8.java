@@ -75,7 +75,7 @@ public class Chap14Prog8 extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new Chap14Program8();
+		new Chap14Prog8();
 	}
 
 }

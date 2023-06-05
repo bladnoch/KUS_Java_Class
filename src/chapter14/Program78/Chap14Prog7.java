@@ -9,8 +9,8 @@ import javax.swing.*;
 
 
 /**
- * Chap14Program7 Client Program:(server)
- * 
+ * Chap14Program7 Client Program:(server) classes have to be seperate
+ *
  * @author Minseok Seo
  * @since 2023-05-31
  * @version 0.0.1
@@ -31,7 +31,7 @@ public class Chap14Prog7 extends JFrame {
 		c.add(new JScrollPane(log), BorderLayout.CENTER);
 		setVisible(true);
 		
-		spellChecker = new SpellChecker("words.txt");
+		spellChecker = new SpellChecker("/Users/doungukkim/Desktop/workspace/Java_Inclass/src/chapter14/Program78/words.txt");
 		
 		if(spellChecker.isFileRead()) {
 			log.setText("Database file [words.txt] is succesfully loaded! \n");
@@ -143,7 +143,7 @@ public class Chap14Prog7 extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new Chap14Program7();
+		new Chap14Prog7();
 	}
 
 }

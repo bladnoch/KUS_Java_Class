@@ -1,3 +1,4 @@
+package chapter14.Program78;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -5,7 +6,7 @@ import java.net.*;
 import javax.swing.*;
 
 /**
- * Chap14Program8 Client Program:
+ * Chap14Program8 Client Program:(client)
  * 
  * @author Minseok Seo
  * @since 2023-05-31
@@ -13,7 +14,7 @@ import javax.swing.*;
  */
  
 
-public class Chap14Program8 extends JFrame {
+public class Chap14Prog8 extends JFrame {
 	
 	private JTextField wordTf = new JTextField(7);
 	private JLabel resLabel = new JLabel("Check result ");
@@ -21,7 +22,7 @@ public class Chap14Program8 extends JFrame {
 	private BufferedReader in = null;
 	private BufferedWriter out = null;
 	
-	public Chap14Program8() {
+	public Chap14Prog8() {
 		
 		super("Client of English spell checker");
 		setSize(300, 100);

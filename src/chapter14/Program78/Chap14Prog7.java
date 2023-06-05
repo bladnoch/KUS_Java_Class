@@ -1,3 +1,4 @@
+package chapter14.Program78;
 import java.awt.*;
 import java.io.*;
 import java.net.*;
@@ -8,19 +9,19 @@ import javax.swing.*;
 
 
 /**
- * Chap14Program7 Client Program:
+ * Chap14Program7 Client Program:(server)
  * 
  * @author Minseok Seo
  * @since 2023-05-31
  * @version 0.0.1
  */
  
-public class Chap14Program7 extends JFrame {
+public class Chap14Prog7 extends JFrame {
 	
 	private SpellChecker spellChecker = null;
 	private JTextArea log = new JTextArea();
 	
-	public Chap14Program7() {
+	public Chap14Prog7() {
 		super("English spell checker");
 		setSize(400, 250);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

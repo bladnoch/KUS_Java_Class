@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Chap14Program7 extends JFrame {
-    private SpellChecker spellChecker=null;
+//    private SpellChecker spellChecker=null;
     private JTextArea log=new JTextArea();
 
     public Chap14Program7(){
@@ -19,9 +19,9 @@ public class Chap14Program7 extends JFrame {
         c.add(new JScrollPane(log), BorderLayout.CENTER);
         setVisible(true);
 
-        spellChecker=new Spellchecker("words.txt");
+//        spellChecker=new Spellchecker("words.txt");
 
-        if(spellChecker.isFileRead()){
+//        if(spellChecker.isFileRead()){
             log.setText("Database file [words.txt] is succesfully loaded! \n");
             new ServerThread().start();
         }
@@ -32,4 +32,4 @@ public class Chap14Program7 extends JFrame {
             Socket socket=null;
         }
     }
-}
+//}

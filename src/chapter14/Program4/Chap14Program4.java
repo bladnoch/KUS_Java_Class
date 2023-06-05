@@ -3,7 +3,9 @@ package chapter14.Program4;
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
-
+/**
+ * server calculates the result and informs the client
+ */
 public class Chap14Program4 {
     public static void main(String[] args){
         Socket socket=null;

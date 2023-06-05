@@ -5,6 +5,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.StringTokenizer;
 
+/**
+ * server calculates the result and informs the client
+ */
 public class Chap14Program3 {
     public static String calc(String exp){
         StringTokenizer st=new StringTokenizer(exp," ");

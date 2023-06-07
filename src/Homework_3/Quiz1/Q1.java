@@ -20,7 +20,7 @@ public class Q1 extends SimpleStatistics{
             std[i]=new Student(temp);
             temp="";
 
-            System.out.println(std[i].studentID);
+            System.out.println(std[i].getStudentID());
         }
     }
 

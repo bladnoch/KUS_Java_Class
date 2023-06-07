@@ -6,4 +6,9 @@ public class Student {
     private boolean gender;
     private double height;
     private double weight;
+
+    public Student(){
+
+    }
+
 }

@@ -1,13 +1,9 @@
 package Homework_3;
 
-public class Std {
-    private String major;
-    private int stdID;
+public class Student {
+    private String department;
+    private int studentID;
     private boolean gender;
     private double height;
     private double weight;
-
-    public void makeStdID(){
-
-    }
 }

@@ -1,14 +1,14 @@
 package Homework_3.Quiz1;
 
-public class Student {
+public class Student extends Q1{
     private String department;
-    private int studentID;
+    private String studentID;
     private boolean gender;
     private double height;
     private double weight;
 
-    public Student(){
-
+    public Student(int id){
+        studentID="Student_"+id;
     }
 
 }

@@ -1,4 +1,4 @@
-package Homework_3;
+package Homework_3.Quiz1;
 
 public class Student {
     private String department;

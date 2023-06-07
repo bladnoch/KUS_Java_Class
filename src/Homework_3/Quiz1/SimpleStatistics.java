@@ -1,4 +1,4 @@
-package Homework_3;
+package Homework_3.Quiz1;
 
 abstract class SimpleStatistics {
     public abstract double getMean(double[] variable);

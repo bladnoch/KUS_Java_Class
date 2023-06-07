@@ -7,7 +7,7 @@ public class Student extends Q1{
     private double height;
     private double weight;
 
-    public Student(int id){
+    public Student(String id){
         studentID="Student_"+id;
     }
 

@@ -15,6 +15,7 @@ public class Student extends SimpleStatistics {
     }
     @Override
     public double getMax(double[] variable) {
+
         return 0;
     }
     @Override

@@ -1,13 +1,35 @@
 package Homework_3.Quiz1;
 
+import java.util.Random;
+
 public class Q1{
     final static int ALLSTD=10000;
     protected static Student std[]=new Student[ALLSTD];
+    protected static Random random=new Random();
     public static void main(String[] args) {
         setStdID();
-
+        setHeight();
+//        printAll();
     }
 
+    public static void printAll(){
+        for (int i=0;i<ALLSTD;i++){
+
+        }
+    }
+    public static void setHeight(){
+        double[] b= new double[ALLSTD];
+        int all=0;
+
+        for (int i=0;i<ALLSTD;i++){
+            b[i]=random.nextGaussian()+173;
+            System.out.println("Student #"+(i+1)+": "+b[i]);
+        }
+        for (int i=0;i<ALLSTD;i++){
+            all+=b[i];
+        }
+        System.out.println("mean of all students are "+(all/ALLSTD));
+    }
     public static void setStdID(){
         String zero="0";
         String temp="";

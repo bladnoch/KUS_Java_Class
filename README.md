@@ -1,11 +1,11 @@
 # Java_OOP_class
-16hw 19final
 
+    개인정보 생성자로 만들어야 함
     Java_Inclass
 
     /Users/[name]/Desktop/workspace/Java_Inclass
 
-    Using Javadoc Comments (모든 경우레 사용)
+    Using Javadoc Comments (모든 경우에 사용)
 
     short cut: /** + [enter]
     

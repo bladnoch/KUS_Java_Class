@@ -9,6 +9,7 @@ public class Q1{
     public static void main(String[] args) {
         setStdID();
         setHeight();
+        setWidth();
 //        printAll();
     }
 
@@ -17,18 +18,31 @@ public class Q1{
 
         }
     }
+    public static void setWidth(){
+        double[] b= new double[ALLSTD];
+        int all=0;
+
+        for (int i=0;i<ALLSTD;i++){
+            b[i]=random.nextGaussian()+68;
+            System.out.println(std[i].getStudentID()+": "+b[i]);
+        }
+        for (int i=0;i<ALLSTD;i++){
+            all+=b[i];
+        }
+        System.out.println("mean weight of all students are "+(all/ALLSTD));
+    }
     public static void setHeight(){
         double[] b= new double[ALLSTD];
         int all=0;
 
         for (int i=0;i<ALLSTD;i++){
             b[i]=random.nextGaussian()+173;
-            System.out.println("Student #"+(i+1)+": "+b[i]);
+            System.out.println(std[i].getStudentID()+": "+b[i]);
         }
         for (int i=0;i<ALLSTD;i++){
             all+=b[i];
         }
-        System.out.println("mean of all students are "+(all/ALLSTD));
+        System.out.println("mean height of all students are "+(all/ALLSTD));
     }
     public static void setStdID(){
         String zero="0";

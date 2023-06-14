@@ -27,6 +27,9 @@ public class Student extends SimpleStatistics {
         }
         System.out.println(height);
     }
+    public double getHeight(){
+        return height;
+    }
     public void setWeight(boolean gender){
         if(gender==true){
             weight= random.nextGaussian()+68;
@@ -35,6 +38,9 @@ public class Student extends SimpleStatistics {
             weight= random.nextGaussian()+52;
         }
         System.out.println(weight);
+    }
+    public double getWeight(){
+        return weight;
     }
     @Override
     public double getMax(double[] variable) {

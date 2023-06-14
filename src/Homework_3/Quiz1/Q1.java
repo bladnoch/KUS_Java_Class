@@ -6,12 +6,20 @@ public class Q1 extends SimpleStatistics{
     protected final static int ALLSTD=10000;
     protected static Student[] std =new Student[ALLSTD];
     protected static Random random=new Random();
+    protected static double[] temp=new double[ALLSTD];
     public static void main(String[] args) {
+        Q1 in=new Q1();
         for (int i=0;i<ALLSTD;i++){
             std[i]=new Student(i);
         }
-//        getMean(std.we);
+        showAbst();
+        System.out.println("min of height is "+ in.getMin(temp));
 
+    }
+    public static void showAbst(){
+        for (int i=0;i<ALLSTD;i++){
+            temp[i]=std[i].getHeight();
+        }
     }
 
     public static void setWidth(){
@@ -57,23 +65,44 @@ public class Q1 extends SimpleStatistics{
         }
     }
 
-    @Override
+
+
+
     public double getMean(double[] variable) {
         return 0;
     }
 
+    /**
+     * @param condition
+     * @param variable
+     * @return
+     */
     @Override
     public double getConditionalMean(String condition, double[] variable) {
         return 0;
     }
 
+    /**
+     * @param variable
+     * @return
+     */
     @Override
     public double getMax(double[] variable) {
         return 0;
     }
 
+    /**
+     * @param variable
+     * @return
+     */
     @Override
     public double getMin(double[] variable) {
-        return 0;
+        double temp=variable[0];
+        for (int i=0;i<ALLSTD;i++){
+            if(variable[i]<temp){
+                temp=variable[i];
+            }
+        }
+        return temp;
     }
 }

@@ -2,24 +2,18 @@ package Homework_3.Quiz1;
 
 import java.util.Random;
 
-public class Q1{
+public class Q1 extends SimpleStatistics{
     protected final static int ALLSTD=10000;
-    protected static Student std[]=new Student[ALLSTD];
+    protected static Student[] std =new Student[ALLSTD];
     protected static Random random=new Random();
     public static void main(String[] args) {
         for (int i=0;i<ALLSTD;i++){
-            std[i]=new Student();
+            std[i]=new Student(i);
         }
-//        setStdID();
-//        setHeight();
-//        setWidth();
+//        getMean(std.we);
+
     }
 
-    public static void printAll(){
-        for (int i=0;i<ALLSTD;i++){
-
-        }
-    }
     public static void setWidth(){
         double[] b= new double[ALLSTD];
         int all=0;
@@ -61,5 +55,25 @@ public class Q1{
             temp="";
             System.out.println(std[i].getStudentID());
         }
+    }
+
+    @Override
+    public double getMean(double[] variable) {
+        return 0;
+    }
+
+    @Override
+    public double getConditionalMean(String condition, double[] variable) {
+        return 0;
+    }
+
+    @Override
+    public double getMax(double[] variable) {
+        return 0;
+    }
+
+    @Override
+    public double getMin(double[] variable) {
+        return 0;
     }
 }

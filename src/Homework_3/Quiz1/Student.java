@@ -1,6 +1,7 @@
 package Homework_3.Quiz1;
 
-import static Homework_3.Quiz1.Q1.ALLSTD;
+import static Homework_2.Q5.setGender;
+import static Homework_3.Quiz1.Q1.*;
 
 public class Student extends SimpleStatistics {
     private String department;
@@ -10,33 +11,61 @@ public class Student extends SimpleStatistics {
     private double weight;
 
 
-    public Student(){
-        setStdID();
+    public Student(int i){
+        setStudentID(i);
+        setGender();
+        setHeight(gender);
+        setWeight(gender);
     }
-    public String getStudentID(){
-        return studentID;
+
+    public void setHeight(boolean gender){
+        if(gender==true){
+            height= random.nextGaussian()+173;
+        }
+        else {
+            height= random.nextGaussian()+162;
+        }
+        System.out.println(height);
+    }
+    public void setWeight(boolean gender){
+        if(gender==true){
+            weight= random.nextGaussian()+68;
+        }
+        else {
+            weight= random.nextGaussian()+52;
+        }
+        System.out.println(weight);
     }
     @Override
     public double getMax(double[] variable) {
-
         return 0;
     }
-    public void setStdID(){
+    public void setGender(){
+        gender= random.nextBoolean();
+        System.out.println(gender);
+    }
+
+    public boolean getGender() {
+        return gender;
+    }
+
+    public void setStudentID(int j){
         String zero="0";
         String temp="";
 
-        for (int i=0;i<ALLSTD;i++){
-            if(String.valueOf(i+1).length()<5){
-                for(int j=0;j<5-String.valueOf(i+1).length();j++){
-                    temp+=zero;
-                }
+        if(String.valueOf(j+1).length()<5){
+            for(int i=0;i<5-String.valueOf(j+1).length();i++){
+                temp+=zero;
             }
-            temp="Student_"+temp+(i+1);
-            studentID=temp;
-            temp="";
-            System.out.println(studentID);
-
         }
+        temp="Student_"+temp+(j+1);
+        studentID=temp;
+        temp="";
+        System.out.println(studentID);
+
+    }
+    public String getStudentID(){
+        return studentID;
     }
     @Override
     public double getConditionalMean(String condition, double[] variable) {

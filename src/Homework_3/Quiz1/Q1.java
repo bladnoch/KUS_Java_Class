@@ -3,14 +3,16 @@ package Homework_3.Quiz1;
 import java.util.Random;
 
 public class Q1{
-    final static int ALLSTD=10000;
+    protected final static int ALLSTD=10000;
     protected static Student std[]=new Student[ALLSTD];
     protected static Random random=new Random();
     public static void main(String[] args) {
-        setStdID();
-        setHeight();
-        setWidth();
-//        printAll();
+        for (int i=0;i<ALLSTD;i++){
+            std[i]=new Student();
+        }
+//        setStdID();
+//        setHeight();
+//        setWidth();
     }
 
     public static void printAll(){
@@ -55,7 +57,7 @@ public class Q1{
                 }
             }
             temp="Student_"+temp+(i+1);
-            std[i]=new Student(temp);
+//            std[i]=new Student(temp);
             temp="";
             System.out.println(std[i].getStudentID());
         }

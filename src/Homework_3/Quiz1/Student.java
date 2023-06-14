@@ -17,6 +17,17 @@ public class Student extends SimpleStatistics {
         setHeight(gender);
         setWeight(gender);
     }
+    public Student(int i,boolean gender){
+        setStudentID(i);
+        this.gender=gender;
+    }
+    public Student(int i,boolean gender, double height, double weight){
+        setStudentID(i);
+        this.gender=gender;
+        this.height=height;
+        this.weight=weight;
+    }
+
 
     public void setHeight(boolean gender){
         if(gender==true){

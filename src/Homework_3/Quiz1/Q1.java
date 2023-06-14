@@ -99,12 +99,6 @@ public class Q1 extends SimpleStatistics{
         v/=ALLSTD;
         return v;
     }
-
-    /**
-     * @param condition
-     * @param variable
-     * @return
-     */
     @Override
     public double getConditionalMean(String condition, double[] variable) {
         double temp=0;
@@ -122,11 +116,6 @@ public class Q1 extends SimpleStatistics{
 
         return temp;
     }
-
-    /**
-     * @param variable
-     * @return
-     */
     @Override
     public double getMax(double[] variable) {
         double v=variable[0];
@@ -137,11 +126,6 @@ public class Q1 extends SimpleStatistics{
         }
         return v;
     }
-
-    /**
-     * @param variable
-     * @return
-     */
     @Override
     public double getMin(double[] variable) {
         double temp=variable[0];

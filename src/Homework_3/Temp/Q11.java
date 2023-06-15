@@ -5,8 +5,9 @@ public class Q11 {
         Students[] temp=new Students[10];
         for(int i=0;i<10;i++){
             temp[i]=new Students();
-            System.out.println(temp[i].getStudentID()+"\n"+(temp[i].isMale()? "male":"female"));
-            System.out.println(temp[i].getHeight());
+            System.out.println(temp[i].getStudentID()+" : "+(temp[i].isMale()? "male":"female"));
+            System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight());
+            System.out.println(" ");
         }
     }
 }

@@ -2,7 +2,7 @@
 package Homework_3.Quiz1;
 
 /**
- * Q1.java
+ * Student.java
  * @author DoungukKim
  * @since 6/4/2023
  * @version v0.0.1

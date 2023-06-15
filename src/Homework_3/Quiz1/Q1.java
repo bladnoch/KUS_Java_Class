@@ -1,7 +1,7 @@
 package Homework_3.Quiz1;
 
-import java.util.ArrayList;
-import java.util.Random;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Q1.java
@@ -11,140 +11,158 @@ import java.util.Random;
  */
 
 
-public class Q1 extends SimpleStatistics{
-    protected final static int ALLSTD=10000;
-    protected static Student[] std =new Student[ALLSTD];
-    protected static Random random=new Random();
-    protected static double[] tempH=new double[ALLSTD];
-    protected static double[] tempW=new double[ALLSTD];
-    protected static int genM=0;
-    protected static int genF=0;
-    public static void main(String[] args) {
+public class Q1 extends SimpleStatistics {
+    final static int STDNUM=10000; //student number
+    private static int males=0; //later it counts males
+    private static int females=0; //later it counts females
+    private static Student[] temp=new Student[STDNUM]; //list of students
+    protected static double[] tempH=new double[STDNUM]; //list of heights
+    protected static double[] tempW=new double[STDNUM]; //list of weights
+
+    /**
+     * constructor and variables of JFrame
+     */
+    protected static JFrame frame;
+    protected static JTextField heightField; //input height
+    protected static JTextField weightField; //input weight
+    protected static JLabel resultLabel; //prints result on JFrame
+
+    /**
+     * Q1() constructor
+     * JFrame that uses CalculateButtonListener.java
+     */
+    public Q1(){
+        frame = new JFrame("Height and Weight Difference Calculator");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 200);
+        frame.setLocationRelativeTo(null);
+        frame.setLayout(new FlowLayout());
+
+        //text field of height
+        frame.add(new JLabel("Your Height (cm):"));
+        heightField = new JTextField(5);
+        frame.add(heightField);
+
+        //text field of weight
+        frame.add(new JLabel("Your Weight (kg):"));
+        weightField = new JTextField(5);
+        frame.add(weightField);
+
+        //button that calculates inputs of height, and weight
+        JButton calculateButton = new JButton("Calculate");
+        frame.add(calculateButton);
+        calculateButton.addActionListener(new CalculateButtonListener());
+
+        //label that prints out the result of height, and weight difference.
+        resultLabel = new JLabel("Difference: ");
+        frame.add(resultLabel);
+
+        frame.setVisible(true);
+    }
+
+
+
+
+    public static void main(String[] args){
+        //creat STDNUM number of students
+        for(int i=0;i<STDNUM;i++){
+            temp[i]=new Student();
+            //comments below are for testing students' information
+//            System.out.println(temp[i].getStudentID()+" : "+(temp[i].isMale()? "male":"female"));
+//            System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight()+"\n");
+        }
+        genCount(); //setting up all variables of the abstract method's parameter
         Q1 in=new Q1();
 
-        for (int i=0;i<ALLSTD;i++){
-            std[i]=new Student(i);
-        }
-
-        showAbst();
-        System.out.println("\nmin height: "+ in.getMin(tempH));
-        System.out.println("Max height: "+ in.getMax(tempH));
-        System.out.println("mean height: "+in.getMean(tempH));
-
-        System.out.println("\nmin weight: "+ in.getMin(tempW));
-        System.out.println("Max weight: "+ in.getMax(tempW));
-        System.out.println("mean weight: "+in.getMean(tempW));
-        cond();
-        System.out.println("\nmean male height: "+in.getConditionalMean("male",tempH));
-        System.out.println("mean male weight: "+in.getConditionalMean("male",tempW));
-        System.out.println("\nmean female height: "+in.getConditionalMean("female",tempH));
-        System.out.println("mean female weight: "+in.getConditionalMean("female",tempW));
+        //five print lines are test comments of print out all abstract method's results
+        System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
+        System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
+        System.out.println("min of height, and weight : "+in.getMin(tempH)+", "+in.getMin(tempW));
+        System.out.println("\nmean of male height and weight : "+in.getConditionalMean("male",tempH)+", "+in.getConditionalMean("male",tempW));
+        System.out.println("mean of female height and weight : "+in.getConditionalMean("female",tempH)+", "+in.getConditionalMean("female",tempW));
 
     }
-    public static void showAbst(){
-        for (int i=0;i<ALLSTD;i++){
-            tempH[i]=std[i].getHeight();
-            tempW[i]=std[i].getWeight();
-        }
-    }
-    public static void cond(){
-        for(int i=0;i<ALLSTD;i++){
-            if(std[i].getGender()){
-                genM+=1;
+
+    /**
+     * setting up the variables for abstract methods
+     * count num of male, female
+     * make list of height, weight
+     */
+    public static void genCount(){
+        for(int i=0;i<STDNUM;i++){
+            if (temp[i].isMale()) {
+                males++; //count male
+            } else {
+                females++; //count female
             }
-            else {
-                genF+=1;
-            }
+            tempH[i]=temp[i].getHeight(); //list of height
+            tempW[i]=temp[i].getWeight(); //list of weight
         }
+        //test comment of checking number of males and females
+//        System.out.println("num of male : "+males+"\nnum of female : "+females);
     }
 
-
+    /**
+     * getMean() method
+     * @param variable: one-dimentional numeric vector such as Height and weight
+     * @return mean of variable
+     */
+    @Override
     public double getMean(double[] variable) {
-        double v=0;
-        for (int i=0;i<ALLSTD;i++){
-                v+=variable[i];
+        double forReturn=0;
+        for (int i=0;i<STDNUM;i++){
+            forReturn+=variable[i];
         }
-        v/=ALLSTD;
-        return v;
+        return forReturn/STDNUM;
     }
+
+    /**
+     * getConditionalMean() method
+     * @param condition: given condition(i.e sex: female and male respectively)
+     * @param variable: one-dimentional numeric vector such as Height and weight
+     * @return mean of variable depends on condition
+     */
     @Override
     public double getConditionalMean(String condition, double[] variable) {
-        double temp=0;
-        for(int i=0;i<ALLSTD;i++){
-            if(condition.equals("male") && std[i].getGender() ==true){
-                temp+=variable[i];
+        double addAll=0;
+        for (int i=0;i<STDNUM;i++){
+            if(condition.equals("male") && temp[i].isMale()){
+                addAll+=variable[i];
             }
-            else if(condition.equals("female") && std[i].getGender()==false){
-                temp+=variable[i];
+            else if(condition.equals("female")&& !temp[i].isMale()){
+                addAll+=variable[i];
+
             }
         }
-        if(condition.equals("male")){
-            temp/=genM;
-        }else temp/=genF;
-
-        return temp;
+        addAll=condition.equals("male")?addAll/males:addAll/females;
+        return addAll;
     }
+
+
+    /**
+     * getMax() method
+     * @param variable: one-dimentional numeric vector such as Height and weight
+     * @return maximum value of input variable
+     */
     @Override
     public double getMax(double[] variable) {
-        double v=variable[0];
-        for (int i=0;i<ALLSTD;i++){
-            if(variable[i]>v){
-                v=variable[i];
-            }
+        double forReturn=variable[0];
+        for (int i=0;i<STDNUM;i++){
+            forReturn= Math.max(variable[i], forReturn);
         }
-        return v;
+        return forReturn;
     }
+
+    /**
+     * getMin() method
+     * @param variable: one-dimentional numeric vector such as Height and weight
+     * @return minimum value of input variable
+     */
     @Override
     public double getMin(double[] variable) {
-        double temp=variable[0];
-        for (int i=0;i<ALLSTD;i++){
-            if(variable[i]<temp){
-                temp=variable[i];
-            }
+        double forReturn=variable[0];
+        for (int i=0;i<STDNUM;i++){
+            forReturn= Math.min(variable[i], forReturn);
         }
-        return temp;
-    }
-
-    public static void setWidth(){
-        double[] b= new double[ALLSTD];
-        int all=0;
-
-        for (int i=0;i<ALLSTD;i++){
-            b[i]=random.nextGaussian()+68;
-            System.out.println(std[i].getStudentID()+": "+b[i]);
-        }
-        for (int i=0;i<ALLSTD;i++){
-            all+=b[i];
-        }
-        System.out.println("mean weight of all students are "+(all/ALLSTD));
-    }
-    public static void setHeight(){
-        double[] b= new double[ALLSTD];
-        int all=0;
-
-        for (int i=0;i<ALLSTD;i++){
-            b[i]=random.nextGaussian()+173;
-            System.out.println(std[i].getStudentID()+": "+b[i]);
-        }
-        for (int i=0;i<ALLSTD;i++){
-            all+=b[i];
-        }
-        System.out.println("mean height of all students are "+(all/ALLSTD));
-    }
-    public static void setStdID(){
-        String zero="0";
-        String temp="";
-
-        for (int i=0;i<ALLSTD;i++){
-            if(String.valueOf(i+1).length()<5){
-                for(int j=0;j<5-String.valueOf(i+1).length();j++){
-                    temp+=zero;
-                }
-            }
-            temp="Student_"+temp+(i+1);
-//            std[i]=new Student(temp);
-            temp="";
-            System.out.println(std[i].getStudentID());
-        }
-    }
+        return forReturn;    }
 }

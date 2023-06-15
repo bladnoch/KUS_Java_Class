@@ -1,22 +1,24 @@
-package Homework_3.Temp;
+package Homework_3.Quiz1;
+
+import Homework_3.Quiz1.Q1;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static Homework_3.Temp.Q11.STDNUM;
-import static Homework_3.Temp.Q11.resultLabel;
+import static Homework_3.Quiz1.Q1.STDNUM;
+import static Homework_3.Quiz1.Q1.resultLabel;
 
 public class CalculateButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         try {
-            double height = Double.parseDouble(Q11.heightField.getText());
-            double weight = Double.parseDouble(Q11.weightField.getText());
+            double height = Double.parseDouble(Q1.heightField.getText());
+            double weight = Double.parseDouble(Q1.weightField.getText());
             double averageH=0;
             double averageW=0;
             for(int i = 0; i< STDNUM; i++){
-                averageH+=Q11.tempH[i];
-                averageW+=Q11.tempW[i];
+                averageH+= Q1.tempH[i];
+                averageW+= Q1.tempW[i];
             }
             averageH/=STDNUM;
             averageW/=STDNUM;
@@ -27,6 +29,6 @@ public class CalculateButtonListener implements ActionListener {
                     averageH, averageW));
 
     } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(Q11.frame, "Please enter valid numbers.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(Q1.frame, "Please enter valid numbers.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
         }
 }}

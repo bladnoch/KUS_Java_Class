@@ -1,7 +1,7 @@
 package Homework_3.Temp;
 
 import javax.swing.*;
-
+import java.awt.*;
 
 
 public class Q11 extends SimpleStatistics {
@@ -15,13 +15,27 @@ public class Q11 extends SimpleStatistics {
     /**
      * constructor of JFrame
       */
-//    private JFrame frame;
-//    public Q11(){
-//        frame=new JFrame();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setSize(300,300);
-//        frame.setVisible(true);
-//    }
+    private JFrame frame;
+    private JTextField heightField;
+    private JTextField weightField;
+    private JButton button;
+    public Q11(){
+        frame=new JFrame("Height and Weight Difference Calculator");
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400,300);
+        frame.setLocationRelativeTo(null);
+        frame.setLayout(new FlowLayout());
+        frame.setVisible(true);
+
+        frame.add(new JLabel("Your Height (cm):"));
+        heightField = new JTextField(5);
+        frame.add(heightField);
+
+        frame.add(new JLabel("Your Weight (kg):"));
+        weightField = new JTextField(5);
+        frame.add(weightField);
+    }
 
 
 
@@ -33,22 +47,26 @@ public class Q11 extends SimpleStatistics {
             temp[i]=new Students();
             System.out.println(temp[i].getStudentID()+" : "+(temp[i].isMale()? "male":"female"));
             System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight()+"\n");
-
         }
         genCount(); //setting up all variables of the abstract method's parameter
+
+        //print out all abstract method's results
         System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
         System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
         System.out.println("min of height, and weight : "+in.getMin(tempH)+", "+in.getMin(tempW));
         System.out.println("\nmean of male height and weight : "+in.getConditionalMean("male",tempH)+", "+in.getConditionalMean("male",tempW));
         System.out.println("mean of female height and weight : "+in.getConditionalMean("female",tempH)+", "+in.getConditionalMean("female",tempW));
+
+
+
         /**
          * to running Jframe
          */
-//        SwingUtilities.invokeLater(new Runnable() {
-//            public void run() {
-//                new Q11();
-//            }
-//        });
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new Q11();
+            }
+        });
     }
 
     /**

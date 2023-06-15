@@ -2,6 +2,7 @@ package Homework_3.Temp;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 
 public class Q11 extends SimpleStatistics {
@@ -18,15 +19,12 @@ public class Q11 extends SimpleStatistics {
     private JFrame frame;
     private JTextField heightField;
     private JTextField weightField;
-    private JButton button;
     public Q11(){
-        frame=new JFrame("Height and Weight Difference Calculator");
-
+        frame = new JFrame("Height and Weight Difference Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400,300);
+        frame.setSize(400, 200);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new FlowLayout());
-        frame.setVisible(true);
 
         frame.add(new JLabel("Your Height (cm):"));
         heightField = new JTextField(5);
@@ -35,6 +33,12 @@ public class Q11 extends SimpleStatistics {
         frame.add(new JLabel("Your Weight (kg):"));
         weightField = new JTextField(5);
         frame.add(weightField);
+
+        JButton calculateButton = new JButton("Calculate");
+        frame.add(calculateButton);
+        calculateButton.addActionListener(new CalculateButtonListener());
+
+        frame.setVisible(true);
     }
 
 
@@ -42,14 +46,19 @@ public class Q11 extends SimpleStatistics {
 
     public static void main(String[] args){
 
-        Q11 in=new Q11();
+        /**
+         * running Jframe
+         */
+
+
+
         for(int i=0;i<STDNUM;i++){
             temp[i]=new Students();
             System.out.println(temp[i].getStudentID()+" : "+(temp[i].isMale()? "male":"female"));
             System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight()+"\n");
         }
         genCount(); //setting up all variables of the abstract method's parameter
-
+        Q11 in=new Q11();
         //print out all abstract method's results
         System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
         System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
@@ -59,14 +68,7 @@ public class Q11 extends SimpleStatistics {
 
 
 
-        /**
-         * to running Jframe
-         */
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new Q11();
-            }
-        });
+
     }
 
     /**

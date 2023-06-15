@@ -6,19 +6,20 @@ import java.awt.event.ActionListener;
 
 
 public class Q11 extends SimpleStatistics {
-    final static int STDNUM=10000;
+    final static int STDNUM=10000; //student number
     private static int males=0;
     private static int females=0;
     private static Students[] temp=new Students[STDNUM];
-    private static double[] tempH=new double[STDNUM];
-    private static double[] tempW=new double[STDNUM];
+    protected static double[] tempH=new double[STDNUM];
+    protected static double[] tempW=new double[STDNUM];
 
     /**
-     * constructor of JFrame
+     * constructor and variables of JFrame
       */
-    private JFrame frame;
-    private JTextField heightField;
-    private JTextField weightField;
+    protected static JFrame frame;
+    protected static JTextField heightField;
+    protected static JTextField weightField;
+    protected static JLabel resultLabel;
     public Q11(){
         frame = new JFrame("Height and Weight Difference Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,6 +39,9 @@ public class Q11 extends SimpleStatistics {
         frame.add(calculateButton);
         calculateButton.addActionListener(new CalculateButtonListener());
 
+        resultLabel = new JLabel("Difference: ");
+        frame.add(resultLabel);
+
         frame.setVisible(true);
     }
 
@@ -49,8 +53,6 @@ public class Q11 extends SimpleStatistics {
         /**
          * running Jframe
          */
-
-
 
         for(int i=0;i<STDNUM;i++){
             temp[i]=new Students();
@@ -66,13 +68,12 @@ public class Q11 extends SimpleStatistics {
         System.out.println("\nmean of male height and weight : "+in.getConditionalMean("male",tempH)+", "+in.getConditionalMean("male",tempW));
         System.out.println("mean of female height and weight : "+in.getConditionalMean("female",tempH)+", "+in.getConditionalMean("female",tempW));
 
-
-
-
     }
 
     /**
      * setting up the variables for abstract methods
+     * count num of male, female
+     * make list of height, weight
      */
     public static void genCount(){
         for(int i=0;i<STDNUM;i++){

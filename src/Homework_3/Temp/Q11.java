@@ -5,7 +5,7 @@ import javax.swing.*;
 
 
 public class Q11 extends SimpleStatistics {
-    final static int STDNUM=10;
+    final static int STDNUM=10000;
     private static int males=0;
     private static int females=0;
     private static Students[] temp=new Students[STDNUM];
@@ -23,6 +23,34 @@ public class Q11 extends SimpleStatistics {
 //        frame.setVisible(true);
 //    }
 
+
+
+
+    public static void main(String[] args){
+
+        Q11 in=new Q11();
+        for(int i=0;i<STDNUM;i++){
+            temp[i]=new Students();
+            System.out.println(temp[i].getStudentID()+" : "+(temp[i].isMale()? "male":"female"));
+            System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight()+"\n");
+
+        }
+        genCount(); //setting up all variables of the abstract method's parameter
+        System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
+        System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
+        System.out.println("min of height, and weight : "+in.getMin(tempH)+", "+in.getMin(tempW));
+        System.out.println("\nmean of male height and weight : "+in.getConditionalMean("male",tempH)+", "+in.getConditionalMean("male",tempW));
+        System.out.println("mean of female height and weight : "+in.getConditionalMean("female",tempH)+", "+in.getConditionalMean("female",tempW));
+        /**
+         * to running Jframe
+         */
+//        SwingUtilities.invokeLater(new Runnable() {
+//            public void run() {
+//                new Q11();
+//            }
+//        });
+    }
+
     /**
      * setting up the variables for abstract methods
      */
@@ -39,34 +67,9 @@ public class Q11 extends SimpleStatistics {
         System.out.println("num of male : "+males+"\nnum of female : "+females);
     }
 
-
-    public static void main(String[] args){
-
-        Q11 in=new Q11();
-        for(int i=0;i<10;i++){
-            temp[i]=new Students();
-            System.out.println(temp[i].getStudentID()+" : "+(temp[i].isMale()? "male":"female"));
-            System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight());
-
-        }
-        genCount(); //setting up all variables of the abstract method's parameter
-        System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
-        System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
-        System.out.println("min of height, and weight : "+in.getMin(tempH)+", "+in.getMin(tempW));
-
-        /**
-         * to running Jframe
-         */
-//        SwingUtilities.invokeLater(new Runnable() {
-//            public void run() {
-//                new Q11();
-//            }
-//        });
-    }
-
     /**
      * @param variable
-     * @return
+     * @return mean of variable
      */
     @Override
     public double getMean(double[] variable) {
@@ -84,8 +87,20 @@ public class Q11 extends SimpleStatistics {
      */
     @Override
     public double getConditionalMean(String condition, double[] variable) {
-        return 0;
+        double addAll=0;
+        for (int i=0;i<STDNUM;i++){
+            if(condition.equals("male") && temp[i].isMale()){
+                addAll+=variable[i];
+            }
+            else if(condition.equals("female")&& !temp[i].isMale()){
+                addAll+=variable[i];
+
+            }
+        }
+        addAll=condition.equals("male")?addAll/males:addAll/females;
+        return addAll;
     }
+
 
     /**
      * @param variable

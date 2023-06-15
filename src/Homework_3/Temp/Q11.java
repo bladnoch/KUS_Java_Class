@@ -49,9 +49,9 @@ public class Q11 extends SimpleStatistics {
             System.out.println("height: "+temp[i].getHeight()+"\nweight: "+temp[i].getWeight());
 
         }
-        genCount(); //setting up all variables of the abstract methos's parameter
-        System.out.println("\n get mean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
-
+        genCount(); //setting up all variables of the abstract method's parameter
+        System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
+        System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
 
         /**
          * to running Jframe
@@ -92,7 +92,11 @@ public class Q11 extends SimpleStatistics {
      */
     @Override
     public double getMax(double[] variable) {
-        return 0;
+        double forReturn=variable[0];
+        for (int i=0;i<STDNUM;i++){
+            forReturn= Math.max(variable[i], forReturn);
+        }
+        return forReturn;
     }
 
     /**
@@ -101,6 +105,9 @@ public class Q11 extends SimpleStatistics {
      */
     @Override
     public double getMin(double[] variable) {
-        return 0;
-    }
+        double forReturn=variable[0];
+        for (int i=0;i<STDNUM;i++){
+            forReturn= Math.min(variable[i], forReturn);
+        }
+        return forReturn;    }
 }

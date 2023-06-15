@@ -9,8 +9,6 @@ import java.awt.*;
  * @since 6/4/2023
  * @version v0.0.1
  */
-
-
 public class Q1 extends SimpleStatistics {
     final static int STDNUM=10000; //student number
     private static int males=0; //later it counts males

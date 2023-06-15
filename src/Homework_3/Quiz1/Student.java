@@ -7,7 +7,6 @@ package Homework_3.Quiz1;
  * @since 6/4/2023
  * @version v0.0.1
  */
-
 import java.util.Random;
 
 public class Student{

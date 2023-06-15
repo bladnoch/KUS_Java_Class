@@ -23,7 +23,8 @@ public class Students{
         this.department = department;
         this.studentID = String.format("Student_%05d", count++);
         this.isMale = isMale;
-        this.height = height;
+        setHeight(isMale);
+        this.height = getHeight();
         this.weight = weight;
     }
     public String getDepartment() {
@@ -37,7 +38,10 @@ public class Students{
     public boolean isMale() {
         return isMale;
     }
-
+    public void setHeight(boolean isMale){
+        double meanHeight = isMale ? 173.0 : 162.0;
+        this.height = rd.nextGaussian()+ meanHeight;
+    }
     public double getHeight() {
         return height;
     }

@@ -52,6 +52,7 @@ public class Q11 extends SimpleStatistics {
         genCount(); //setting up all variables of the abstract method's parameter
         System.out.println("\nmean of height, and weight : "+in.getMean(tempH)+", "+in.getMean(tempW));
         System.out.println("max of height, and weight : "+in.getMax(tempH)+", "+in.getMax(tempW));
+        System.out.println("min of height, and weight : "+in.getMin(tempH)+", "+in.getMin(tempW));
 
         /**
          * to running Jframe

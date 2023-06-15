@@ -1,4 +1,4 @@
-package Homework_3.Quiz1;
+package Homework_3.Quiz2;
 
 import javax.swing.*;
 import java.awt.*;

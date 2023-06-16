@@ -1,16 +1,21 @@
 package Homework_3.Quiz2;
 
+import Homework_3.Quiz1.CalculateButtonListener;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Q2{
     final static int APROX=10000;
+    protected static Students[] std=new Students[APROX];
+    protected static int stdNum=0;
 
-
-    protected JFrame frame;
-    protected JTextField genderField;
-    protected JTextField weightField;
-    protected JTextField gradeField;
+    protected static JFrame frame;
+    protected static JTextField genderField;
+    protected static JTextField weightField;
+    protected static JTextField gradeField;
+    protected static JLabel resultLabel; //prints result on JFrame
     public Q2(){
         frame = new JFrame("add new student");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,11 +35,18 @@ public class Q2{
         gradeField = new JTextField(12);
         frame.add(gradeField);
 
+        JButton enterButton = new JButton("Enter");
+        frame.add(enterButton);
+        enterButton.addActionListener(new AddButtonListener());
+
+
         frame.setVisible(true);
     }
     public static void main(String[] args){
         Q2 in=new Q2();
-//        Q1 temp=new Q1();
+
+
+
 
     }
 }

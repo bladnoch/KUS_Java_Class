@@ -10,13 +10,15 @@ public class Students {
 
     Students(){
         this.gender=rd.nextBoolean()? "male":"female";
-        this.weight=1.0;
-        this.grade=0.0;
+        this.weight=rd.nextDouble(40,100);
+        this.grade=rd.nextDouble(0.0,4.5);
+        Q2.stdNum++;
     }
     Students(String gender, double weight, double grade){
         this.gender=gender;
         this.weight=weight;
         this.grade=grade;
+
     }
     public String getGender() {
         return gender;

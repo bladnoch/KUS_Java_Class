@@ -9,20 +9,21 @@ public class Q2{
     protected static Students[] std=new Students[APROX];
     protected static int stdNum=0;
 
+
     protected static JFrame frame;
     protected static JRadioButton maleRadioButton = new JRadioButton("Male");
     protected static JRadioButton femaleRadioButton = new JRadioButton("Female");
     protected static JTextField weightField;
     protected static JTextField gradeField;
-    protected static JLabel resultLabel; //prints result on JFrame
+    protected static JTextArea textArea;
+    protected static JScrollPane scrollPane;
+    protected static JLabel resultLabel;
     public Q2(){
         frame = new JFrame("add new student");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 200);
+        frame.setSize(600, 900);
         frame.setLocationRelativeTo(null);
-        frame.setLayout(new GridLayout(4,1));
-
-
+        frame.setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
 
         ButtonGroup genderButtonGroup = new ButtonGroup();
         genderButtonGroup.add(maleRadioButton);
@@ -43,14 +44,21 @@ public class Q2{
         frame.add(enterButton);
         enterButton.addActionListener(new AddButtonListener());
 
+        JButton studentButton = new JButton("Student List");
+        frame.add(studentButton);
+        studentButton.addActionListener(new AddButtonListener2());
+
+        textArea = new JTextArea();
+        textArea.setEditable(false);
+
+        scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new Dimension(580, 700));
+        frame.add(scrollPane, BorderLayout.CENTER);
 
         frame.setVisible(true);
     }
     public static void main(String[] args){
         Q2 in=new Q2();
-
-
-
 
     }
 }

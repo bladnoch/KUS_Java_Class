@@ -1,18 +1,17 @@
 package Homework_3.Quiz2;
 
-import Homework_3.Quiz1.CalculateButtonListener;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Q2{
-    final static int APROX=10000;
+    final static int APROX=100000;
     protected static Students[] std=new Students[APROX];
     protected static int stdNum=0;
 
     protected static JFrame frame;
-    protected static JTextField genderField;
+    protected static JRadioButton maleRadioButton = new JRadioButton("Male");
+    protected static JRadioButton femaleRadioButton = new JRadioButton("Female");
     protected static JTextField weightField;
     protected static JTextField gradeField;
     protected static JLabel resultLabel; //prints result on JFrame
@@ -23,9 +22,14 @@ public class Q2{
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridLayout(4,1));
 
-        frame.add(new JLabel("Gender (male/female):"));
-        genderField = new JTextField(12);
-        frame.add(genderField);
+
+
+        ButtonGroup genderButtonGroup = new ButtonGroup();
+        genderButtonGroup.add(maleRadioButton);
+        genderButtonGroup.add(femaleRadioButton);
+
+        frame.add(maleRadioButton);
+        frame.add(femaleRadioButton);
 
         frame.add(new JLabel("Weight (kg):"));
         weightField = new JTextField(12);

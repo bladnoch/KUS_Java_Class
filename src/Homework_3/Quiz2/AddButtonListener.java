@@ -5,7 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static Homework_3.Quiz2.Q2.stdNum;
-
+/**
+ * AddButtonListener.java button that saves student info from GUI
+ * @author Dounguk Kim
+ * @since 6/16/2023
+ * @version v0.0.1
+ */
 public class AddButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event){
         try{

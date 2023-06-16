@@ -88,13 +88,13 @@ public class Q2{
         frame.add(studentButton);
         studentButton.addActionListener(new AddButtonListener2());
 
+
         /**
          * resultLabel JLabel
          * this shows mean of GPA
          */
         resultLabel = new JLabel("GPA : ");
         frame.add(resultLabel);
-
 
 
         /**
@@ -108,10 +108,20 @@ public class Q2{
         scrollPane.setPreferredSize(new Dimension(530, 400));
         frame.add(scrollPane, BorderLayout.CENTER);
 
+        /**
+         * button
+         * save button for save added student info
+         * using SaveButtonListener()
+         */
         JButton saveButton = new JButton("Save");
         frame.add(saveButton);
         saveButton.addActionListener(new SaveButtonListener());
 
+        /**
+         * button
+         * load button for load saved student info
+         * using LoadButtonListener
+         */
         JButton loadButton = new JButton("Load");
         frame.add(loadButton);
         loadButton.addActionListener(new LoadButtonListener());
@@ -123,6 +133,7 @@ public class Q2{
 //        creat random students for Q4
         for (int i=0;i<1000000;i++){
             std[i]=new Students();
+
         }
         Q2 in=new Q2();
     }

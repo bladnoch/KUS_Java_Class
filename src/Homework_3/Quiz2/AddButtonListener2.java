@@ -12,32 +12,30 @@ import static Homework_3.Quiz2.Q2.*;
  * @version v0.0.1
  */
 public class AddButtonListener2 implements ActionListener {
-    public void actionPerformed(ActionEvent event){
+    public void actionPerformed(ActionEvent event) {
         textArea.setText("");
 
         //list of student info
         textArea.append("Gender      Weight      Grade\n");
 
-        //prints students' info on textArea, and gives average GPA
-        double factor = Math.pow(10, 1);
-        double gpa=0;
-
-        long start=System.currentTimeMillis();
-
         for(int i=0;i<stdNum;i++){
             textArea.append(std[i].getGender() +"         "+std[i].getWeight() +"          "+std[i].getGrade()+"\n");
-            gpa+=std[i].getGrade();
         }
-        gpa/=stdNum;
-        gpa= Math.round(gpa * factor) / factor;
-        long end=System.currentTimeMillis();
 
+        try {
+            test();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-        // print average gpa on GUI
-        Q2.resultLabel.setText(": "+gpa);
-
-        //print ave GPA on prompt
-        System.out.println("Average GPA : "+gpa);
-        System.out.println("Elaspsed time: "+(end-start)/1000.0+"sec.");
+    /**
+     * ForThread, NoThread classes
+     * test elapsed time depends on using thread or not
+     * @throws InterruptedException
+     */
+    public static void test() throws InterruptedException{
+        new NoThread();
+        new ForThread();
     }
 }

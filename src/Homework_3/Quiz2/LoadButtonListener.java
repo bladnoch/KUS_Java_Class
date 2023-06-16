@@ -38,7 +38,9 @@ public class LoadButtonListener implements ActionListener {
         // print loaded data on prompt.
         if (loadedData != null) {
             System.out.println("Data has been read from backup2021270682_doungukkim.data");
-            System.out.println("Loaded data: " + Arrays.toString((String[]) loadedData));
+
+            // test code for check loaded values in prompt
+//            System.out.println("Loaded data: " + Arrays.toString((String[]) loadedData));
         } else {
             System.out.println("Failed to read data from backup2021270682_doungukkim.data");
         }

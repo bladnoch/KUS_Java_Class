@@ -11,7 +11,7 @@ import java.awt.*;
  * @version v0.0.1
  */
 public class Q2{
-    final static int APROX=100000; //Maximum of student number
+    final static int APROX=100000000; //Maximum of student number
     protected static Students[] std=new Students[APROX]; //list of students
     protected static int stdNum=0; //count number of saved students
 
@@ -20,15 +20,15 @@ public class Q2{
      */
     protected static JFrame frame;
 
-    /**
-     * GUI checks gender by radio button of male and female
-     */
+
+    //  GUI checks gender by radio button of male and female
     protected static JRadioButton maleRadioButton = new JRadioButton("Male");
     protected static JRadioButton femaleRadioButton = new JRadioButton("Female");
     protected static JTextField weightField;
     protected static JTextField gradeField;
     protected static JTextArea textArea;
     protected static JScrollPane scrollPane;
+    protected static JLabel resultLabel;
 
     /**
      * Q2 constructor
@@ -75,6 +75,18 @@ public class Q2{
         studentButton.addActionListener(new AddButtonListener2());
 
         /**
+         *
+         */
+        JButton gpaButton = new JButton("Average GPA");
+        frame.add(gpaButton);
+        gpaButton.addActionListener(new gpaButtonListener());
+
+        resultLabel = new JLabel(" : ");
+        frame.add(resultLabel);
+
+
+
+        /**
          * textArea
          * prints student info
          */
@@ -93,13 +105,12 @@ public class Q2{
         frame.add(loadButton);
         loadButton.addActionListener(new LoadButtonListener());
 
-
         frame.setVisible(true);
     }
     public static void main(String[] args){
 
-        //creat random students for Q4
-        for (int i=0;i<10000;i++){
+//        creat random students for Q4
+        for (int i=0;i<1000000;i++){
             std[i]=new Students();
         }
         Q2 in=new Q2();

@@ -85,10 +85,14 @@ public class Q2{
         scrollPane.setPreferredSize(new Dimension(580, 700));
         frame.add(scrollPane, BorderLayout.CENTER);
 
+        JButton saveButton = new JButton("Save");
+        frame.add(saveButton);
+        saveButton.addActionListener(new SaveButtonListener());
+
+
         frame.setVisible(true);
     }
     public static void main(String[] args){
         Q2 in=new Q2();
-
     }
 }

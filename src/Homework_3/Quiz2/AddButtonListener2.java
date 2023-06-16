@@ -22,17 +22,22 @@ public class AddButtonListener2 implements ActionListener {
         double factor = Math.pow(10, 1);
         double gpa=0;
 
+        long start=System.currentTimeMillis();
+
         for(int i=0;i<stdNum;i++){
             textArea.append(std[i].getGender() +"         "+std[i].getWeight() +"          "+std[i].getGrade()+"\n");
             gpa+=std[i].getGrade();
         }
         gpa/=stdNum;
         gpa= Math.round(gpa * factor) / factor;
+        long end=System.currentTimeMillis();
+
 
         // print average gpa on GUI
         Q2.resultLabel.setText(": "+gpa);
 
         //print ave GPA on prompt
         System.out.println("Average GPA : "+gpa);
+        System.out.println("Elaspsed time: "+(end-start)/1000.0+"sec.");
     }
 }

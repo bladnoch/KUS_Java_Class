@@ -15,7 +15,7 @@ public class Chap10Program5 {
 
 
         //readable
-        outPW.println(10);
+        outPW.println(101);
         outPW.println("hello world");
         outPW.println(true);
 

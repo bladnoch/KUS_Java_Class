@@ -39,7 +39,7 @@ public class Q2{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 900);
         frame.setLocationRelativeTo(null);
-        frame.setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
+        frame.setLayout(new FlowLayout());
 
         ButtonGroup genderButtonGroup = new ButtonGroup();
         genderButtonGroup.add(maleRadioButton);
@@ -88,6 +88,10 @@ public class Q2{
         JButton saveButton = new JButton("Save");
         frame.add(saveButton);
         saveButton.addActionListener(new SaveButtonListener());
+
+        JButton loadButton = new JButton("Load");
+        frame.add(loadButton);
+        loadButton.addActionListener(new LoadButtonListener());
 
 
         frame.setVisible(true);

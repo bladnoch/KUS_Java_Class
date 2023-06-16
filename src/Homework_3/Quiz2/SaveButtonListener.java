@@ -9,12 +9,20 @@ import java.io.ObjectOutputStream;
 import static Homework_3.Quiz2.Q2.std;
 import static Homework_3.Quiz2.Q2.stdNum;
 
-
+/**
+ * SaveButtonListener.java
+ * @author Dounguk Kim
+ * @since 6/16/2023
+ * @version v0.0.1
+ */
 public class SaveButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event){
+        /**
+         * creat String list for save student information
+         * save std values on info[]
+         */
         String[] info=new String[stdNum*3];
-
-        int count=0;
+        int count=0; //variable for count std list
 
         for(int i=0;i<stdNum*3;i+=3){
             info[i]=std[count].getGender();
@@ -22,20 +30,21 @@ public class SaveButtonListener implements ActionListener {
             info[i+2]=String.valueOf(std[count].getGrade());
             count++;
         }
-        System.out.println("------");
-        for(int i=0;i<info.length;i++){
-            System.out.println(info[i]+" ");
-        }
+        // test code for check values of info[]
+//        System.out.println("------");
+//        for(int i=0;i<info.length;i++){
+//            System.out.println(info[i]+" ");
+//        }
 
         try {
-            // "dataFile.data" 파일에 배열 값을 저장합니다.
+            // save values of array in "backup2021270682_doungukkim.data"
             FileOutputStream fileOut = new FileOutputStream("backup2021270682_doungukkim.data");
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
 
-            // 배열을 파일에 작성합니다.
+            // save value in the file
             objectOut.writeObject(info);
 
-            // 리소스를 해제하고 파일에 변경 사항을 저장합니다.
+            // save the changes of file
             objectOut.close();
             fileOut.close();
 

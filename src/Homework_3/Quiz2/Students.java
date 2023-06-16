@@ -35,7 +35,6 @@ public class Students {
         this.gender=gender;
         this.weight=weight;
         this.grade=grade;
-
     }
 
     /**

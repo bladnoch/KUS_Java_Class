@@ -37,16 +37,9 @@ public class Q2{
     public Q2(){
         frame = new JFrame("add new student");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 550);
+        frame.setSize(550, 550);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new FlowLayout());
-
-        ButtonGroup genderButtonGroup = new ButtonGroup();
-        genderButtonGroup.add(maleRadioButton);
-        genderButtonGroup.add(femaleRadioButton);
-
-        frame.add(maleRadioButton);
-        frame.add(femaleRadioButton);
 
         frame.add(new JLabel("Weight (kg):"));
         weightField = new JTextField(12);
@@ -55,6 +48,13 @@ public class Q2{
         frame.add(new JLabel("Grade (0~4.5):"));
         gradeField = new JTextField(12);
         frame.add(gradeField);
+
+        ButtonGroup genderButtonGroup = new ButtonGroup();
+        genderButtonGroup.add(maleRadioButton);
+        genderButtonGroup.add(femaleRadioButton);
+
+        frame.add(maleRadioButton);
+        frame.add(femaleRadioButton);
 
         /**
          * enterButton
@@ -82,7 +82,7 @@ public class Q2{
         textArea.setEditable(false);
 
         scrollPane = new JScrollPane(textArea);
-        scrollPane.setPreferredSize(new Dimension(580, 400));
+        scrollPane.setPreferredSize(new Dimension(530, 400));
         frame.add(scrollPane, BorderLayout.CENTER);
 
         JButton saveButton = new JButton("Save");
@@ -97,6 +97,11 @@ public class Q2{
         frame.setVisible(true);
     }
     public static void main(String[] args){
+
+        //creat random students for Q4
+        for (int i=0;i<10000;i++){
+            std[i]=new Students();
+        }
         Q2 in=new Q2();
     }
 }

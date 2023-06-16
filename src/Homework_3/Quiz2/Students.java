@@ -19,9 +19,10 @@ public class Students {
      * no param constructor randomly fills student info
      */
     Students(){
+        double factor = Math.pow(10, 1);
         this.gender=rd.nextBoolean()? "male":"female";
-        this.weight=rd.nextDouble(40,100);
-        this.grade=rd.nextDouble(0.0,4.5);
+        this.weight= Math.round(rd.nextDouble(40,100) * factor) / factor;
+        this.grade=Math.round(rd.nextDouble(0.0,4.5) * factor) / factor;
         Q2.stdNum++;
     }
 

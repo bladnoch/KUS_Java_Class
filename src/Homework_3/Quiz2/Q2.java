@@ -44,7 +44,7 @@ public class Q2{
         frame.add(enterButton);
         enterButton.addActionListener(new AddButtonListener());
 
-        JButton studentButton = new JButton("Student List");
+        JButton studentButton = new JButton("Print Student List");
         frame.add(studentButton);
         studentButton.addActionListener(new AddButtonListener2());
 

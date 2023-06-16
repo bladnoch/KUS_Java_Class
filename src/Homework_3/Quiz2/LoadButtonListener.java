@@ -35,10 +35,10 @@ public class LoadButtonListener implements ActionListener {
 
         // 읽어온 데이터를 출력합니다.
         if (loadedData != null) {
-            System.out.println("Data has been read from dataFile.data");
+            System.out.println("Data has been read from backup2021270682_doungukkim.data");
             System.out.println("Loaded data: " + Arrays.toString((String[]) loadedData));
         } else {
-            System.out.println("Failed to read data from dataFile.data");
+            System.out.println("Failed to read data from backup2021270682_doungukkim.data");
         }
         String[] loadedArray = (String[]) loadedData;
 

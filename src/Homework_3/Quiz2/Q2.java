@@ -37,7 +37,7 @@ public class Q2{
     public Q2(){
         frame = new JFrame("add new student");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 900);
+        frame.setSize(600, 550);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new FlowLayout());
 
@@ -82,7 +82,7 @@ public class Q2{
         textArea.setEditable(false);
 
         scrollPane = new JScrollPane(textArea);
-        scrollPane.setPreferredSize(new Dimension(580, 700));
+        scrollPane.setPreferredSize(new Dimension(580, 400));
         frame.add(scrollPane, BorderLayout.CENTER);
 
         JButton saveButton = new JButton("Save");

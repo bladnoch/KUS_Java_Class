@@ -18,10 +18,12 @@ public class AddButtonListener2 implements ActionListener {
         //list of student info
         textArea.append("Gender      Weight      Grade\n");
 
+        //print student info
         for(int i=0;i<stdNum;i++){
             textArea.append(std[i].getGender() +"         "+std[i].getWeight() +"          "+std[i].getGrade()+"\n");
         }
 
+        // calls GPA calc classes
         try {
             test();
         } catch (InterruptedException e) {

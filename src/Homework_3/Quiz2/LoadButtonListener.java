@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.Arrays;
 
 import static Homework_3.Quiz2.Q2.stdNum;
 

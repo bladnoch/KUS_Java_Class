@@ -18,11 +18,21 @@ public class AddButtonListener2 implements ActionListener {
         //list of student info
         textArea.append("Gender      Weight      Grade\n");
 
-        //prints students' info on textArea
+        //prints students' info on textArea, and gives average GPA
+        double factor = Math.pow(10, 1);
+        double gpa=0;
+
         for(int i=0;i<stdNum;i++){
             textArea.append(std[i].getGender() +"         "+std[i].getWeight() +"          "+std[i].getGrade()+"\n");
-
+            gpa+=std[i].getGrade();
         }
+        gpa/=stdNum;
+        gpa= Math.round(gpa * factor) / factor;
 
+        // print average gpa on GUI
+        Q2.resultLabel.setText(": "+gpa);
+
+        //print ave GPA on prompt
+        System.out.println("Average GPA : "+gpa);
     }
 }

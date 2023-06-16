@@ -37,18 +37,31 @@ public class Q2{
     public Q2(){
         frame = new JFrame("add new student");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(550, 550);
+        frame.setSize(700, 550);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new FlowLayout());
 
+        /**
+         * Jlabel, JTextField
+         * set of weight label, textfield
+         */
         frame.add(new JLabel("Weight (kg):"));
         weightField = new JTextField(12);
         frame.add(weightField);
 
+
+        /**
+         * Jlabel, JTextField
+         * set of grade label, textfield
+         */
         frame.add(new JLabel("Grade (0~4.5):"));
         gradeField = new JTextField(12);
         frame.add(gradeField);
 
+        /**
+         *  maleRadioButton, femalRadioButton
+         *  set of two radio button for gender
+         */
         ButtonGroup genderButtonGroup = new ButtonGroup();
         genderButtonGroup.add(maleRadioButton);
         genderButtonGroup.add(femaleRadioButton);
@@ -67,7 +80,8 @@ public class Q2{
 
         /**
          * studentButton
-         * print student information
+         * print student information ont textarea
+         * print mean GPA on label
          * this button is calling AddButtonListener2()
          */
         JButton studentButton = new JButton("Print Student List");
@@ -75,13 +89,10 @@ public class Q2{
         studentButton.addActionListener(new AddButtonListener2());
 
         /**
-         *
+         * resultLabel JLabel
+         * this shows mean of GPA
          */
-        JButton gpaButton = new JButton("Average GPA");
-        frame.add(gpaButton);
-        gpaButton.addActionListener(new gpaButtonListener());
-
-        resultLabel = new JLabel(" : ");
+        resultLabel = new JLabel("GPA : ");
         frame.add(resultLabel);
 
 

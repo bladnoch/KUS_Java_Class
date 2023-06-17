@@ -22,13 +22,6 @@ public class AddButtonListener2 implements ActionListener {
         for(int i=0;i<stdNum;i++){
             textArea.append(std[i].getGender() +"         "+std[i].getWeight() +"          "+std[i].getGrade()+"\n");
         }
-
-        // calls GPA calc classes
-        try {
-            test();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     /**
@@ -36,8 +29,5 @@ public class AddButtonListener2 implements ActionListener {
      * test elapsed time depends on using thread or not
      * @throws InterruptedException
      */
-    public static void test() throws InterruptedException{
-        new NoThread();
-        new ForThread();
-    }
+
 }

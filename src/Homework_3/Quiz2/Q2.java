@@ -136,5 +136,25 @@ public class Q2{
 
         }
         Q2 in=new Q2();
+
+        /**
+         * test() method on main
+         * call timerr, thread timer on prompt
+         */
+        try {
+            test();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * test() method
+     * runs NoThread, ForThread classes
+     * @throws InterruptedException
+     */
+    public static void test() throws InterruptedException{
+        new NoThread();
+        new ForThread();
     }
 }

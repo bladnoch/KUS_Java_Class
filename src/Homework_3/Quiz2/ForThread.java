@@ -36,7 +36,7 @@ public class ForThread {
             threads[i].join();
         }
 
-        total=StdThread.sum/Q2.stdNum;
+        total= StdThread.sum/Q2.stdNum;
         total=Math.round(total * factor) / factor;
 
         //print GPA

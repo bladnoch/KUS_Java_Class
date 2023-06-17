@@ -15,6 +15,7 @@ public class AddButtonListener2 implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         textArea.setText("");
 
+
         //list of student info
         textArea.append("Gender      Weight      Grade\n");
 
@@ -24,10 +25,5 @@ public class AddButtonListener2 implements ActionListener {
         }
     }
 
-    /**
-     * ForThread, NoThread classes
-     * test elapsed time depends on using thread or not
-     * @throws InterruptedException
-     */
 
 }

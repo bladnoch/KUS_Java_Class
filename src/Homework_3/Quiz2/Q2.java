@@ -156,5 +156,6 @@ public class Q2{
     public static void test() throws InterruptedException{
         new NoThread();
         new ForThread();
+        new InTextAreaThread();
     }
 }

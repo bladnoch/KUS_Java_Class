@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class Q2Ver2 {
     protected static StdQ2[] inputStd=new StdQ2[1000000];
+    protected static String[] arrayedStd;
     protected static int stdCount=0;
     protected static JFrame frame;
 
@@ -49,9 +50,13 @@ public class Q2Ver2 {
         stdTextArea = new JTextArea(30,48);
         panel.add(stdTextArea);
 
-        JButton saveBtn=new JButton("Submit");
+        JButton saveBtn=new JButton("Save");
         panel.add(saveBtn);
-        compareBtn.addActionListener(new saveListener());
+        saveBtn.addActionListener(new SaveListener());
+
+        JButton loadBtn=new JButton("Load");
+        panel.add(loadBtn);
+        loadBtn.addActionListener(new LoadListener());
 
         frame.getContentPane().add(panel);
         frame.setVisible(true);

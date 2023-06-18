@@ -40,17 +40,28 @@ public class SubmitListener implements ActionListener {
                 gender="unknown";
             }
 
-
-            Q2Ver2.inputStd[Q2Ver2.stdCount]=new StdQ2(gender,weight,gpa);
-            stdTextArea.setText("");
-            stdTextArea.append("-gender-    -weight-     -GPA-\n");
-            System.out.println("gender   weight    GPA");
-            for(int i=0;i<Q2Ver2.stdCount;i++){
-                stdTextArea.append("   "+inputStd[i].getGender()+"         "+inputStd[i].getWeight()+"             "+inputStd[i].getGPA()+"\n");
-                System.out.println(inputStd[i].getGender()+"    "+inputStd[i].getWeight()+"     "+inputStd[i].getGPA());
-            }
+            onTextArea(gender,weight,gpa);
+//
+//            Q2Ver2.inputStd[Q2Ver2.stdCount]=new StdQ2(gender,weight,gpa);
+//            stdTextArea.setText("");
+//            stdTextArea.append("-gender-    -weight-     -GPA-\n");
+//            System.out.println("gender   weight    GPA");
+//            for(int i=0;i<Q2Ver2.stdCount;i++){
+//                stdTextArea.append("   "+inputStd[i].getGender()+"         "+inputStd[i].getWeight()+"             "+inputStd[i].getGPA()+"\n");
+//                System.out.println(inputStd[i].getGender()+"    "+inputStd[i].getWeight()+"     "+inputStd[i].getGPA());
+//            }
         }
 
 
+    }
+    public static void onTextArea(String gender, Double weight, Double gpa){
+        Q2Ver2.inputStd[Q2Ver2.stdCount]=new StdQ2(gender,weight,gpa);
+        stdTextArea.setText("");
+        stdTextArea.append("-gender-    -weight-     -GPA-\n");
+        System.out.println("gender   weight    GPA");
+        for(int i=0;i<Q2Ver2.stdCount;i++){
+            stdTextArea.append("   "+inputStd[i].getGender()+"         "+inputStd[i].getWeight()+"             "+inputStd[i].getGPA()+"\n");
+            System.out.println(inputStd[i].getGender()+"    "+inputStd[i].getWeight()+"     "+inputStd[i].getGPA());
+        }
     }
 }

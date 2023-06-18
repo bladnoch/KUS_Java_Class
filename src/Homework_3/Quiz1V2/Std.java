@@ -1,4 +1,4 @@
-package Homework_3.Quiz2V2;
+package Homework_3.Quiz1V2;
 
 import java.util.Random;
 
@@ -18,12 +18,12 @@ public class Std {
         this.department = department;
         this.studentID = String.format("Student_%05d", studentCount);
         if (rand.nextDouble() < 0.5) {
-            this.gender = "Male";
+            this.gender = "male";
         } else {
-            this.gender = "Female";
+            this.gender = "female";
         }
-        this.height = (gender.equals("Male") ? rand.nextGaussian() + 173 : rand.nextGaussian()+ 162);
-        this.weight = (gender.equals("Male") ? rand.nextGaussian()+ 68 : rand.nextGaussian()+ 52);
+        this.height = (gender.equals("male") ? rand.nextGaussian() + 173 : rand.nextGaussian()+ 162);
+        this.weight = (gender.equals("male") ? rand.nextGaussian()+ 68 : rand.nextGaussian()+ 52);
     }
 
     // getters and setters

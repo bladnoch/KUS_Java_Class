@@ -1,19 +1,29 @@
 package Homework_3.Quiz2V2;
 
+import java.util.Random;
+
 public class Std {
     private String department;
     private String studentID;
-    private char gender;
-    private int height;
+    private String gender;
+    private double height;
     private double weight;
+    private static int studentCount = 0;
+    private Random rand=new Random();
 
-    // constructor
-    public Std(String department, String studentID, char gender, int height, double weight) {
+
+    public Std() {
+        studentCount++;
+
         this.department = department;
-        this.studentID = studentID;
-        this.gender = gender;
-        this.height = height;
-        this.weight = weight;
+        this.studentID = String.format("Student_%05d", studentCount);
+        if (rand.nextDouble() < 0.5) {
+            this.gender = "Male";
+        } else {
+            this.gender = "Female";
+        }
+        this.height = (gender.equals("Male") ? rand.nextGaussian() + 173 : rand.nextGaussian()+ 162);
+        this.weight = (gender.equals("Male") ? rand.nextGaussian()+ 68 : rand.nextGaussian()+ 52);
     }
 
     // getters and setters
@@ -29,13 +39,13 @@ public class Std {
     public void setStudentID(String studentID) {
         this.studentID = studentID;
     }
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
     public void setHeight(int height) {

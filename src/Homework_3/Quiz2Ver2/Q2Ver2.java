@@ -2,13 +2,12 @@ package Homework_3.Quiz2Ver2;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class Q2Ver2 {
     protected static StdQ2[] inputStd=new StdQ2[1000000];
     protected static int stdCount=0;
-    private JFrame frame;
+    protected static JFrame frame;
 
     protected static JRadioButton maleRadio;
     protected static JRadioButton femaleRadio;
@@ -16,7 +15,7 @@ public class Q2Ver2 {
     protected static JTextField gpaInput;
     protected static  JTextArea stdTextArea;
     public Q2Ver2(){
-        frame = new JFrame("Data Comparison");
+        frame = new JFrame("std info control");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 600);
         JPanel panel = new JPanel(new FlowLayout());
@@ -31,8 +30,6 @@ public class Q2Ver2 {
 
         panel.add(maleRadio);
         panel.add(femaleRadio);
-
-
 
         panel.add(new JLabel("Weight:"));
         weightInput=new JTextField(10);
@@ -50,8 +47,11 @@ public class Q2Ver2 {
         compareBtn.addActionListener(new SubmitListener());
 
         stdTextArea = new JTextArea(30,48);
-//        JScrollPane scrollPane = new JScrollPane(stdTextArea);
         panel.add(stdTextArea);
+
+        JButton saveBtn=new JButton("Submit");
+        panel.add(saveBtn);
+        compareBtn.addActionListener(new saveListener());
 
         frame.getContentPane().add(panel);
         frame.setVisible(true);

@@ -27,6 +27,7 @@ public class Chap14Program6 extends JFrame {
 
         Container c=getContentPane();
         c.setLayout(new FlowLayout());
+
         c.add(startTf);
         c.add(operatorTf);
         c.add(endTf);
